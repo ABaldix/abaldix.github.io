@@ -55,10 +55,10 @@ main.silos-section { padding: 60px 20px; }
 .article-content ul { margin-bottom: 24px; padding-left: 24px; }
 .pro-tip { background-color: #F8FAFC; border-left: 4px solid var(--accent-yellow); padding: 24px; border-radius: 0 12px 12px 0; margin: 32px 0; font-style: italic; }
 
-/* HUECOS ADSENSE */
-.adsense-container { margin: 40px auto; text-align: center; }
-.ad-placeholder { background-color: #F3F4F6; border: 1px dashed #D1D5DB; color: #9CA3AF; padding: 30px; font-size: 14px; border-radius: 8px; max-width: 728px; margin: 0 auto; }
-.ad-in-article { margin: 40px 0; background: #F3F4F6; border: 1px dashed #D1D5DB; padding: 20px; text-align: center; color: #9CA3AF; font-size: 14px; border-radius: 8px; }
+/* HUECOS ADSENSE (Ocultos para dejar paso a los Auto Ads de Google) */
+.adsense-container, .ad-placeholder, .ad-in-article { 
+    display: none !important; 
+}
 
 /* --- NUEVO: CARRUSEL DE NOTICIAS CSS --- */
 .carousel-wrapper { position: relative; margin-bottom: 80px; }
