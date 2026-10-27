@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your solar savings and get free quotes from certified local installers.">
+    <title>Get Free Solar Quotes | VivaVoltia</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GOOGLE ADSENSE SCRIPT -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8681391761083035" crossorigin="anonymous"></script>
+
+    <style>
+        /* Estilos específicos para el formulario premium */
+        .quote-form-container { max-width: 600px; margin: 40px auto; background: #fff; padding: 40px; border-radius: 16px; box-shadow: var(--card-shadow); }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #374151; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #D1D5DB; border-radius: 8px; font-size: 1rem; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary-green); ring: 2px solid var(--primary-green); }
+        .trust-badges { display: flex; justify-content: center; gap: 20px; margin-top: 30px; font-size: 0.9rem; color: #6B7280; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <div class="logo"><a href="/">VivaVoltia</a></div>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container text-center" style="padding: 60px 20px;">
+        <h1 style="font-size: 2.5rem; color: #111827; margin-bottom: 15px;">Calculate Your Solar Savings</h1>
+        <p style="font-size: 1.1rem; color: #4B5563; max-width: 600px; margin: 0 auto;">Enter your details below to see how much you could save with the 30% ITC and connect with top-rated installers in your zip code.</p>
+
+        <div class="quote-form-container">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text" id="zipcode" name="zipcode" placeholder="e.g. 90210" required>
+                </div>
+                <div class="form-group">
+                    <label for="bill">Average Monthly Electric Bill</label>
+                    <select id="bill" name="bill">
+                        <option value="Under $100">Under $100</option>
+                        <option value="$100 - $150">$100 - $150</option>
+                        <option value="$151 - $200">$151 - $200</option>
+                        <option value="$201+">$201+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+                <button type="button" class="btn-cta-main" style="width: 100%; margin-top: 10px;" onclick="alert('Form submission will be enabled soon!')">Get My Free Quotes</button>
+            </form>
+
+            <div class="trust-badges">
+                <span>🔒 Secure & Confidential</span>
+                <span>✅ No Obligation</span>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center"><p>© 2026 VivaVoltia.com - Empowering US Homeowners with Solar Energy.</p></div>
+    </footer>
+
+</body>
+</html>
