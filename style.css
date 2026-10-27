@@ -1,0 +1,144 @@
+/* IMPORTAR TIPOGRAFÍA PREMIUM (INTER) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg-color: #FAFAFA; /* Blanco un poco más suave y elegante */
+    --text-color: #1F2937;
+    --text-light: #4B5563;
+    --primary-green: #059669; /* Verde más sobrio y confiable */
+    --hover-green: #047857;
+    --accent-yellow: #F59E0B;
+    --border-color: #E5E7EB;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.text-center { text-align: center; }
+
+/* CABECERA PREMIUM */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo a { font-size: 24px; font-weight: 800; color: var(--primary-green); text-decoration: none; letter-spacing: -0.5px;}
+.nav-links a { text-decoration: none; color: var(--text-light); margin: 0 16px; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+.nav-links a:hover { color: var(--primary-green); }
+
+.btn-cta-header {
+    background-color: var(--text-color);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+.btn-cta-header:hover { background-color: #000; transform: translateY(-1px); }
+
+/* DISEÑO DE ARTÍCULO PREMIUM (Para lectura) */
+.article-container {
+    max-width: 800px; /* Más estrecho para lectura perfecta */
+    margin: 40px auto;
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    padding: 40px;
+}
+
+.breadcrumbs {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+.breadcrumbs a { color: var(--primary-green); text-decoration: none; font-weight: 500;}
+
+.article-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: #111827;
+    letter-spacing: -0.02em;
+}
+
+/* SEÑALES DE CONFIANZA (E-E-A-T) */
+.author-meta {
+    display: flex;
+    align-items: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 32px;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    margin-right: 16px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.author-info h4 { font-size: 1rem; margin-bottom: 2px; }
+.author-info p { font-size: 0.85rem; color: var(--text-light); }
+.fact-check { display: inline-flex; align-items: center; background: #ECFDF5; color: var(--primary-green); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-left: auto;}
+
+/* CUERPO DEL ARTÍCULO */
+.article-content h2 { font-size: 1.8rem; margin: 40px 0 16px; color: #111827; }
+.article-content h3 { font-size: 1.4rem; margin: 32px 0 16px; color: #374151; }
+.article-content p { font-size: 1.1rem; margin-bottom: 24px; color: #374151; }
+.article-content ul { margin-bottom: 24px; padding-left: 24px; }
+.article-content li { font-size: 1.1rem; margin-bottom: 10px; color: #374151;}
+
+/* CAJA DE DESTACADO (PRO TIP) */
+.pro-tip {
+    background-color: #F8FAFC;
+    border-left: 4px solid var(--accent-yellow);
+    padding: 24px;
+    border-radius: 0 12px 12px 0;
+    margin: 32px 0;
+    font-style: italic;
+}
+
+/* HUECOS ADSENSE EN ARTÍCULO */
+.ad-in-article {
+    margin: 40px 0;
+    background: #F3F4F6;
+    border: 1px dashed #D1D5DB;
+    padding: 20px;
+    text-align: center;
+    color: #9CA3AF;
+    font-size: 14px;
+    border-radius: 8px;
+}
