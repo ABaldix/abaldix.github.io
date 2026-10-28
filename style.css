@@ -73,6 +73,38 @@ main.silos-section { padding: 60px 20px; }
 .carousel-item p { color: var(--text-light); font-size: 0.95rem; line-height: 1.5; flex-grow: 1;}
 .read-more { color: var(--primary-green); font-weight: 600; font-size: 0.9rem; margin-top: 20px; display: inline-block; }
 
+/* CAJA DE AUTOR */
+.author-box {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    border-left: 4px solid var(--primary-green, #10b981);
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 0 8px 8px 0;
+    gap: 20px;
+}
+.author-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.author-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #1f2937;
+}
+.author-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+@media (max-width: 600px) {
+    .author-box { flex-direction: column; text-align: center; }
+}
 /* FOOTER */
 .footer { background-color: #111827; color: #9CA3AF; padding: 40px 20px; text-align: center; margin-top: 60px;}
 
