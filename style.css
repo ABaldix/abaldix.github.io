@@ -73,6 +73,17 @@ main.silos-section { padding: 60px 20px; }
 .carousel-item p { color: var(--text-light); font-size: 0.95rem; line-height: 1.5; flex-grow: 1;}
 .read-more { color: var(--primary-green); font-weight: 600; font-size: 0.9rem; margin-top: 20px; display: inline-block; }
 
+/* CAJA PRO-TIP */
+.pro-tip {
+    background-color: #ecfdf5; /* Fondo verde muy suave */
+    border: 1px solid #a7f3d0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+    font-size: 1rem;
+    color: #065f46;
+}
+
 /* CAJA DE AUTOR */
 .author-box {
     display: flex;
