@@ -274,6 +274,7 @@ def head(title, description, canonical, prefix, og_type="website", image=None, e
     <meta name="twitter:description" content="{esc(description)}">
     <meta name="twitter:image" content="{img}">
     <meta name="theme-color" content="#047857">
+    <meta name="p:domain_verify" content="541f0271ec3d287fcb341d49972f1237">
     <link rel="icon" type="image/png" href="/images/icono.png">
     <link rel="apple-touch-icon" href="/images/icono.png">
     <link rel="alternate" type="application/rss+xml" title="VivaVoltia Guides" href="{BASE}/feed.xml">
