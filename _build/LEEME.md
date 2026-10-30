@@ -24,11 +24,13 @@ En 1–2 minutos GitHub regenera la web (pestaña **Actions**, flujo "Build site
 | Campo | Obligatorio | Qué es |
 |---|---|---|
 | `title` | sí | Título del artículo |
-| `description` | sí | Resumen corto (tarjetas y Google) |
+| `description` | sí | Meta descripción para Google y tarjetas: 110–160 caracteres |
 | `category` | sí | `costs`, `panels`, `batteries`, `inverters` o `installation` |
 | `published` | sí | Fecha de publicación `AAAA-MM-DD` (ordena "Latest Guides") |
 | `updated` | no | Fecha de la última revisión |
-| `seo_title` | no | Título alternativo para Google |
+| `seo_title` | recomendado | Título para Google: máx. ~52 caracteres (se añade " | VivaVoltia") |
+| `keyword` | recomendado | Palabra clave principal. Debe aparecer en `seo_title`, `description`, el primer párrafo (`lede`) y algún `<h2>` |
+| `dek` | no | Subtítulo visible más largo; si falta se usa `description` |
 | `image`, `image_alt` | no | Foto de `images/`. Sin foto se usa el icono de la categoría |
 | `takeaway` | no | Puntos clave (repite la línea para cada uno) |
 | `source` | no | Fuente: `Nombre | URL` (repite la línea) |
@@ -37,6 +39,12 @@ En 1–2 minutos GitHub regenera la web (pestaña **Actions**, flujo "Build site
 | `order` | no | Número para ordenar artículos publicados el mismo día |
 
 ## Comprobaciones automáticas
+
+Cada publicación ejecuta una auditoría SEO: avisa si el título o la descripción
+son demasiado largos o si la palabra clave falta en el título, la descripción,
+el primer párrafo o un subtítulo H2 (lo verás en el registro de **Actions**).
+
+Las fotos que subas a `images/` se convierten solas a WebP en varios tamaños.
 
 Si un artículo enlaza a otro que no existe, la publicación falla y en la
 pestaña **Actions** verás el error. Así no quedan enlaces rotos.

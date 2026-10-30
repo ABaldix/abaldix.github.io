@@ -1,7 +1,8 @@
 ---
 title: Article Title Shown on the Page
-seo_title: Optional shorter title for Google (without "| VivaVoltia")
-description: One or two sentences (about 150 characters) that summarize the article. Used on cards and in Google.
+seo_title: Title for Google, max ~52 characters
+keyword: main keyword phrase
+description: Meta description, 110-160 characters, including the keyword.
 category: panels
 published: 2026-11-15
 updated: 2026-11-15
@@ -14,7 +15,7 @@ source: Name of the source | https://example.gov/page
 source: Another source | https://example.org/page
 related: slug-of-another-article
 ---
-<p class="lede">Opening paragraph.</p>
+<p class="lede">Opening paragraph that includes the main keyword.</p>
 
 <h2>First Section</h2>
 <p>Text. Link to another guide like this: <a href="how-many-solar-panels-do-i-need.html">sizing guide</a>.</p>
