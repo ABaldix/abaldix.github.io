@@ -1,0 +1,120 @@
+---
+title: Solar Panel Cost & Payback Calculator (2026) | VivaVoltia
+description: Free solar calculator: estimate the system size, cost, and payback period for solar panels on your US home in 2026.
+---
+
+    <main class="container" style="padding: 60px 20px;">
+        <div class="text-center">
+            <h1 style="font-size: 2.5rem; color: #111827; margin-bottom: 15px;">Solar Cost &amp; Payback Calculator</h1>
+            <p style="font-size: 1.1rem; color: #4B5563; max-width: 640px; margin: 0 auto;">Get a quick estimate of the system size, upfront cost, and payback period for solar on your home, using 2026 prices and no federal tax credit. Your numbers stay in your browser.</p>
+        </div>
+
+        <div class="calc-layout">
+            <form class="calc-card" id="calc" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="bill">Average monthly electric bill ($)</label>
+                    <input type="number" id="bill" min="20" max="2000" step="5" value="150" inputmode="decimal">
+                </div>
+                <div class="form-group">
+                    <label for="rate">Electricity price ($ per kWh)</label>
+                    <input type="number" id="rate" min="0.05" max="1" step="0.01" value="0.18" inputmode="decimal">
+                    <small>Check your bill. The US average is roughly $0.17 to $0.18.</small>
+                </div>
+                <div class="form-group">
+                    <label for="sun">Your region's sunshine</label>
+                    <select id="sun">
+                        <option value="5.8">Very sunny (AZ, NV, NM, Southern CA)</option>
+                        <option value="5.0">Sunny (TX, FL, CO, Northern CA, Southeast)</option>
+                        <option value="4.3" selected>Average (Midwest, Mid-Atlantic, Southern Plains)</option>
+                        <option value="3.7">Less sunny (Northeast, Pacific Northwest, Great Lakes)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="offset">Share of your bill to cover with solar (%)</label>
+                    <input type="number" id="offset" min="10" max="120" step="5" value="100" inputmode="decimal">
+                </div>
+                <div class="form-group">
+                    <label for="cpw">Installed cost ($ per watt)</label>
+                    <input type="number" id="cpw" min="1" max="6" step="0.05" value="2.85" inputmode="decimal">
+                    <small>2026 national average is about $2.85/W before incentives.</small>
+                </div>
+                <div class="form-group">
+                    <label for="rebate">State or utility rebates ($)</label>
+                    <input type="number" id="rebate" min="0" max="50000" step="100" value="0" inputmode="decimal">
+                </div>
+            </form>
+
+            <section class="calc-card calc-results" aria-live="polite">
+                <h2>Your Estimate</h2>
+                <dl>
+                    <div><dt>Recommended system size</dt><dd id="r-size">–</dd></div>
+                    <div><dt>Approximate number of panels (420 W)</dt><dd id="r-panels">–</dd></div>
+                    <div><dt>Estimated upfront cost</dt><dd id="r-cost">–</dd></div>
+                    <div><dt>First-year savings</dt><dd id="r-save">–</dd></div>
+                    <div><dt>Estimated payback period</dt><dd id="r-payback">–</dd></div>
+                    <div><dt>Net savings over 25 years</dt><dd id="r-25">–</dd></div>
+                </dl>
+                <p class="calc-note">Estimates assume 80% system efficiency, 0.5% yearly panel degradation, 3% yearly electricity price increases, and full-retail net metering. The 30% federal homeowner tax credit ended on December 31, 2025, so it is not included. Real quotes depend on your roof, shading, utility, and installer. <a href="articles/federal-solar-tax-credit-guide.html">Read what changed with the tax credit</a>.</p>
+            </section>
+        </div>
+
+        <section class="article-container" style="margin-top: 40px;">
+            <article class="article-content">
+                <h2>How This Calculator Works</h2>
+                <p>First, it converts your monthly bill into yearly electricity use (bill ÷ price per kWh × 12). Then it sizes a system that produces that much energy, based on the average peak sun hours in your region. Cost is system size × installed price per watt, minus any rebates you enter. Savings grow each year with electricity prices, and shrink slightly as panels age.</p>
+                <h2>Next Steps</h2>
+                <ul>
+                    <li>See how many panels a typical home needs in <a href="articles/how-many-solar-panels-do-i-need.html">How Many Solar Panels Do I Need?</a></li>
+                    <li>Compare financing in <a href="articles/solar-lease-vs-buy.html">Solar Lease vs. Buy</a>.</li>
+                    <li>Learn how bill credits work in <a href="articles/what-is-net-metering.html">What Is Net Metering?</a></li>
+                    <li>Get at least three quotes from licensed local installers before you sign.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script>
+    (function () {
+        var ids = ["bill", "rate", "sun", "offset", "cpw", "rebate"];
+        var fmt = function (n) { return "$" + Math.round(n).toLocaleString("en-US"); };
+        function num(id) { var v = parseFloat(document.getElementById(id).value); return isNaN(v) ? 0 : v; }
+        function calc() {
+            var bill = num("bill"), rate = num("rate"), sun = num("sun"), offset = num("offset") / 100;
+            var cpw = num("cpw"), rebate = num("rebate");
+            var out = function (id, t) { document.getElementById(id).textContent = t; };
+            if (bill <= 0 || rate <= 0 || sun <= 0 || offset <= 0 || cpw <= 0) {
+                ["r-size", "r-panels", "r-cost", "r-save", "r-payback", "r-25"].forEach(function (i) { out(i, "–"); });
+                return;
+            }
+            var usage = bill / rate * 12;                      // kWh per year
+            var target = usage * offset;                        // kWh to produce
+            var kw = target / (sun * 365 * 0.8);                // system kW
+            var cost = Math.max(kw * 1000 * cpw - rebate, 0);
+            var panels = Math.ceil(kw * 1000 / 420);
+            var production = kw * sun * 365 * 0.8;
+            var total = 0, payback = null, yearSave = 0, first = 0;
+            for (var y = 1; y <= 25; y++) {
+                var prod = production * Math.pow(0.995, y - 1);
+                var price = rate * Math.pow(1.03, y - 1);
+                yearSave = Math.min(prod, usage) * price;
+                if (y === 1) first = yearSave;
+                if (payback === null && total + yearSave >= cost) {
+                    payback = (y - 1) + (cost - total) / yearSave;
+                }
+                total += yearSave;
+            }
+            out("r-size", kw.toFixed(1) + " kW");
+            out("r-panels", panels + " panels");
+            out("r-cost", fmt(cost));
+            out("r-save", fmt(first) + " per year");
+            out("r-payback", payback === null ? "More than 25 years" : payback.toFixed(1) + " years");
+            out("r-25", fmt(total - cost));
+        }
+        ids.forEach(function (id) {
+            var el = document.getElementById(id);
+            el.addEventListener("input", calc);
+            el.addEventListener("change", calc);
+        });
+        calc();
+    })();
+    </script>
+
