@@ -35,9 +35,32 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898388+github-actions[bot]@users.noreply.github.com"
           git add -A articles guides images/opt index.html 404.html feed.xml sitemap.xml about.html contact.html privacy.html terms.html quote.html
+          git diff --cached --name-only -- articles guides index.html > /tmp/changed.txt || true
           if git diff --cached --quiet; then
             echo "Nothing to commit"
           else
             git commit -m "Rebuild site from _src"
             git push
           fi
+      - name: Notify search engines (IndexNow - Bing, Yandex, etc.)
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, urllib.request
+          base = "https://vivavoltia.com/"
+          import os, re
+          if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch":
+              # manual run: submit every URL in the sitemap
+              urls = re.findall(r"<loc>(.*?)</loc>", pathlib.Path("sitemap.xml").read_text())
+          else:
+              changed = [l.strip() for l in pathlib.Path("/tmp/changed.txt").read_text().splitlines() if l.strip().endswith(".html")]
+              urls = [base if c == "index.html" else base + c for c in changed]
+          if not urls:
+              print("No changed pages to submit"); raise SystemExit
+          body = json.dumps({"host": "vivavoltia.com", "key": "c997e84b4c26485daeac2cd1f82d74e2",
+                             "keyLocation": base + "c997e84b4c26485daeac2cd1f82d74e2.txt", "urlList": urls[:10000]}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
+                                       headers={"Content-Type": "application/json; charset=utf-8"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              print("IndexNow:", r.status, "for", len(urls), "URLs")
+          PY
