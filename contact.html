@@ -1,37 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Consent banner (Usercentrics CMP) - must load first -->
+    <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="xmscxn1pEWkIXc" async></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EFYE3P537"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1EFYE3P537');
+    </script>
+
+    <!-- Google AdSense (Auto ads) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8681391761083035" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
+    <meta name="description" content="Contact the VivaVoltia team with questions about residential solar, corrections, or feedback on our guides.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | VivaVoltia</title>
-    <link rel="icon" type="image/png" href="images/icono.png">
+    <link rel="canonical" href="https://vivavoltia.com/contact.html">
+    <link rel="icon" type="image/png" href="/images/icono.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
         <div class="container navbar">
             <div class="logo"><a href="/">VivaVoltia</a></div>
-            <nav class="nav-links"><a href="/">Home</a></nav>
+            <nav class="nav-links">
+                <a href="articles/best-solar-panels-for-homes.html">Solar Panels</a>
+                <a href="articles/microinverters-vs-string-inverters.html">Inverters</a>
+                <a href="articles/tesla-powerwall-3-review.html">Batteries</a>
+                <a href="articles/federal-solar-tax-credit-guide.html">Tax Credits</a>
+                <a href="/#guides">All Guides</a>
+            </nav>
+            <a href="quote.html" class="btn-cta-header">Solar Calculator</a>
         </div>
     </header>
 
     <main class="article-container">
         <h1 class="article-title">Contact Us</h1>
         <article class="article-content">
-            <p>Do you have questions about residential solar energy, our guides, or need help calculating your potential savings? We are here to help.</p>
-            
+            <p>Have a question about one of our guides, found an error, or want to suggest a topic? We'd like to hear from you.</p>
+
             <div class="pro-tip" style="margin-top: 40px;">
                 <h3>Get in Touch</h3>
-                <p><strong>Email:</strong> contact@vivavoltia.com</p>
-                <p>We aim to respond to all inquiries within 48 business hours.</p>
+                <p><strong>Email:</strong> <a href="mailto:contact@vivavoltia.com">contact@vivavoltia.com</a></p>
+                <p>We aim to respond to all inquiries within 2 business days.</p>
             </div>
-            
-            <p><em>Note: If you are looking for a solar quote, please use the free calculator tool on our homepage to connect with certified local installers in your state.</em></p>
+
+            <h2>What We Can Help With</h2>
+            <ul>
+                <li>Corrections or updates to an article.</li>
+                <li>Questions about the information in our guides.</li>
+                <li>Privacy requests, such as a request to access or delete data (see our <a href="privacy.html">Privacy Policy</a>).</li>
+                <li>Advertising or partnership inquiries.</li>
+            </ul>
+
+            <p><em>Note: VivaVoltia does not sell or install solar systems, and we can't give personal tax or financial advice. To estimate the size and cost of a system for your home, try our free <a href="quote.html">solar calculator</a>.</em></p>
         </article>
     </main>
 
     <footer class="footer">
-        <div class="container text-center"><p>© 2026 VivaVoltia.com</p></div>
+        <div class="container">
+            <nav class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Disclaimer</a>
+            </nav>
+            <p>© 2026 VivaVoltia.com · Independent guides to residential solar energy in the US.</p>
+            <p class="footer-note">VivaVoltia is supported by advertising. Content is for general information only and is not financial, tax, or legal advice.</p>
+        </div>
     </footer>
 </body>
 </html>

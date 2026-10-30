@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.vivavoltia.com/sitemap.xml
+Sitemap: https://vivavoltia.com/sitemap.xml

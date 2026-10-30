@@ -1,73 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculate your solar savings and get free quotes from certified local installers.">
-    <title>Get Free Solar Quotes | VivaVoltia</title>
-    <link rel="icon" type="image/png" href="images/icono.png">
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- GOOGLE ADSENSE SCRIPT -->
+    <!-- Consent banner (Usercentrics CMP) - must load first -->
+    <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="xmscxn1pEWkIXc" async></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EFYE3P537"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1EFYE3P537');
+    </script>
+
+    <!-- Google AdSense (Auto ads) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8681391761083035" crossorigin="anonymous"></script>
 
-    <style>
-        /* Estilos específicos para el formulario premium */
-        .quote-form-container { max-width: 600px; margin: 40px auto; background: #fff; padding: 40px; border-radius: 16px; box-shadow: var(--card-shadow); }
-        .form-group { margin-bottom: 20px; text-align: left; }
-        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #374151; }
-        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #D1D5DB; border-radius: 8px; font-size: 1rem; }
-        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary-green); ring: 2px solid var(--primary-green); }
-        .trust-badges { display: flex; justify-content: center; gap: 20px; margin-top: 30px; font-size: 0.9rem; color: #6B7280; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free solar calculator: estimate the system size, cost, and payback period for solar panels on your US home in 2026.">
+    <title>Solar Panel Cost &amp; Payback Calculator (2026) | VivaVoltia</title>
+    <link rel="canonical" href="https://vivavoltia.com/quote.html">
+    <link rel="icon" type="image/png" href="/images/icono.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header class="header">
         <div class="container navbar">
             <div class="logo"><a href="/">VivaVoltia</a></div>
             <nav class="nav-links">
-                <a href="/">Home</a>
+                <a href="articles/best-solar-panels-for-homes.html">Solar Panels</a>
+                <a href="articles/microinverters-vs-string-inverters.html">Inverters</a>
+                <a href="articles/tesla-powerwall-3-review.html">Batteries</a>
+                <a href="articles/federal-solar-tax-credit-guide.html">Tax Credits</a>
+                <a href="/#guides">All Guides</a>
             </nav>
+            <a href="quote.html" class="btn-cta-header">Solar Calculator</a>
         </div>
     </header>
 
-    <main class="container text-center" style="padding: 60px 20px;">
-        <h1 style="font-size: 2.5rem; color: #111827; margin-bottom: 15px;">Calculate Your Solar Savings</h1>
-        <p style="font-size: 1.1rem; color: #4B5563; max-width: 600px; margin: 0 auto;">Enter your details below to see how much you could save with the 30% ITC and connect with top-rated installers in your zip code.</p>
+    <main class="container" style="padding: 60px 20px;">
+        <div class="text-center">
+            <h1 style="font-size: 2.5rem; color: #111827; margin-bottom: 15px;">Solar Cost &amp; Payback Calculator</h1>
+            <p style="font-size: 1.1rem; color: #4B5563; max-width: 640px; margin: 0 auto;">Get a quick estimate of the system size, upfront cost, and payback period for solar on your home, using 2026 prices and no federal tax credit. Your numbers stay in your browser.</p>
+        </div>
 
-        <div class="quote-form-container">
-            <form action="#" method="POST">
+        <div class="calc-layout">
+            <form class="calc-card" id="calc" onsubmit="return false;">
                 <div class="form-group">
-                    <label for="zipcode">Zip Code</label>
-                    <input type="text" id="zipcode" name="zipcode" placeholder="e.g. 90210" required>
+                    <label for="bill">Average monthly electric bill ($)</label>
+                    <input type="number" id="bill" min="20" max="2000" step="5" value="150" inputmode="decimal">
                 </div>
                 <div class="form-group">
-                    <label for="bill">Average Monthly Electric Bill</label>
-                    <select id="bill" name="bill">
-                        <option value="Under $100">Under $100</option>
-                        <option value="$100 - $150">$100 - $150</option>
-                        <option value="$151 - $200">$151 - $200</option>
-                        <option value="$201+">$201+</option>
+                    <label for="rate">Electricity price ($ per kWh)</label>
+                    <input type="number" id="rate" min="0.05" max="1" step="0.01" value="0.18" inputmode="decimal">
+                    <small>Check your bill. The US average is roughly $0.17 to $0.18.</small>
+                </div>
+                <div class="form-group">
+                    <label for="sun">Your region's sunshine</label>
+                    <select id="sun">
+                        <option value="5.8">Very sunny (AZ, NV, NM, Southern CA)</option>
+                        <option value="5.0">Sunny (TX, FL, CO, Northern CA, Southeast)</option>
+                        <option value="4.3" selected>Average (Midwest, Mid-Atlantic, Southern Plains)</option>
+                        <option value="3.7">Less sunny (Northeast, Pacific Northwest, Great Lakes)</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    <label for="offset">Share of your bill to cover with solar (%)</label>
+                    <input type="number" id="offset" min="10" max="120" step="5" value="100" inputmode="decimal">
                 </div>
-                <button type="button" class="btn-cta-main" style="width: 100%; margin-top: 10px;" onclick="alert('Form submission will be enabled soon!')">Get My Free Quotes</button>
+                <div class="form-group">
+                    <label for="cpw">Installed cost ($ per watt)</label>
+                    <input type="number" id="cpw" min="1" max="6" step="0.05" value="2.85" inputmode="decimal">
+                    <small>2026 national average is about $2.85/W before incentives.</small>
+                </div>
+                <div class="form-group">
+                    <label for="rebate">State or utility rebates ($)</label>
+                    <input type="number" id="rebate" min="0" max="50000" step="100" value="0" inputmode="decimal">
+                </div>
             </form>
 
-            <div class="trust-badges">
-                <span>🔒 Secure & Confidential</span>
-                <span>✅ No Obligation</span>
-            </div>
+            <section class="calc-card calc-results" aria-live="polite">
+                <h2>Your Estimate</h2>
+                <dl>
+                    <div><dt>Recommended system size</dt><dd id="r-size">–</dd></div>
+                    <div><dt>Approximate number of panels (420 W)</dt><dd id="r-panels">–</dd></div>
+                    <div><dt>Estimated upfront cost</dt><dd id="r-cost">–</dd></div>
+                    <div><dt>First-year savings</dt><dd id="r-save">–</dd></div>
+                    <div><dt>Estimated payback period</dt><dd id="r-payback">–</dd></div>
+                    <div><dt>Net savings over 25 years</dt><dd id="r-25">–</dd></div>
+                </dl>
+                <p class="calc-note">Estimates assume 80% system efficiency, 0.5% yearly panel degradation, 3% yearly electricity price increases, and full-retail net metering. The 30% federal homeowner tax credit ended on December 31, 2025, so it is not included. Real quotes depend on your roof, shading, utility, and installer. <a href="articles/federal-solar-tax-credit-guide.html">Read what changed with the tax credit</a>.</p>
+            </section>
         </div>
+
+        <section class="article-container" style="margin-top: 40px;">
+            <article class="article-content">
+                <h2>How This Calculator Works</h2>
+                <p>First, it converts your monthly bill into yearly electricity use (bill ÷ price per kWh × 12). Then it sizes a system that produces that much energy, based on the average peak sun hours in your region. Cost is system size × installed price per watt, minus any rebates you enter. Savings grow each year with electricity prices, and shrink slightly as panels age.</p>
+                <h2>Next Steps</h2>
+                <ul>
+                    <li>See how many panels a typical home needs in <a href="articles/how-many-solar-panels-do-i-need.html">How Many Solar Panels Do I Need?</a></li>
+                    <li>Compare financing in <a href="articles/solar-lease-vs-buy.html">Solar Lease vs. Buy</a>.</li>
+                    <li>Learn how bill credits work in <a href="articles/what-is-net-metering.html">What Is Net Metering?</a></li>
+                    <li>Get at least three quotes from licensed local installers before you sign.</li>
+                </ul>
+            </article>
+        </section>
     </main>
 
     <footer class="footer">
-        <div class="container text-center"><p>© 2026 VivaVoltia.com - Empowering US Homeowners with Solar Energy.</p></div>
+        <div class="container">
+            <nav class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Disclaimer</a>
+            </nav>
+            <p>© 2026 VivaVoltia.com · Independent guides to residential solar energy in the US.</p>
+            <p class="footer-note">VivaVoltia is supported by advertising. Content is for general information only and is not financial, tax, or legal advice.</p>
+        </div>
     </footer>
 
+    <script>
+    (function () {
+        var ids = ["bill", "rate", "sun", "offset", "cpw", "rebate"];
+        var fmt = function (n) { return "$" + Math.round(n).toLocaleString("en-US"); };
+        function num(id) { var v = parseFloat(document.getElementById(id).value); return isNaN(v) ? 0 : v; }
+        function calc() {
+            var bill = num("bill"), rate = num("rate"), sun = num("sun"), offset = num("offset") / 100;
+            var cpw = num("cpw"), rebate = num("rebate");
+            var out = function (id, t) { document.getElementById(id).textContent = t; };
+            if (bill <= 0 || rate <= 0 || sun <= 0 || offset <= 0 || cpw <= 0) {
+                ["r-size", "r-panels", "r-cost", "r-save", "r-payback", "r-25"].forEach(function (i) { out(i, "–"); });
+                return;
+            }
+            var usage = bill / rate * 12;                      // kWh per year
+            var target = usage * offset;                        // kWh to produce
+            var kw = target / (sun * 365 * 0.8);                // system kW
+            var cost = Math.max(kw * 1000 * cpw - rebate, 0);
+            var panels = Math.ceil(kw * 1000 / 420);
+            var production = kw * sun * 365 * 0.8;
+            var total = 0, payback = null, yearSave = 0, first = 0;
+            for (var y = 1; y <= 25; y++) {
+                var prod = production * Math.pow(0.995, y - 1);
+                var price = rate * Math.pow(1.03, y - 1);
+                yearSave = Math.min(prod, usage) * price;
+                if (y === 1) first = yearSave;
+                if (payback === null && total + yearSave >= cost) {
+                    payback = (y - 1) + (cost - total) / yearSave;
+                }
+                total += yearSave;
+            }
+            out("r-size", kw.toFixed(1) + " kW");
+            out("r-panels", panels + " panels");
+            out("r-cost", fmt(cost));
+            out("r-save", fmt(first) + " per year");
+            out("r-payback", payback === null ? "More than 25 years" : payback.toFixed(1) + " years");
+            out("r-25", fmt(total - cost));
+        }
+        ids.forEach(function (id) {
+            var el = document.getElementById(id);
+            el.addEventListener("input", calc);
+            el.addEventListener("change", calc);
+        });
+        calc();
+    })();
+    </script>
 </body>
 </html>
