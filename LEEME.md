@@ -76,6 +76,11 @@ branding/                Material de marca que no se publica (foto de perfil)
 .github/workflows/       Compila, publica en GitHub Pages y avisa a buscadores (IndexNow)
 ```
 
+**Importante:** todo lo que está dentro de `static/` se publica en la **raíz** de la web.
+Por ejemplo, `static/ads.txt` es `vivavoltia.com/ads.txt`. Si un servicio (Google, Bing,
+Pinterest, Facebook…) te pide subir un archivo de verificación "a la raíz del sitio",
+súbelo a `static/`.
+
 La web publicada (vivavoltia.com/articles/…, /guides/…, /quote.html…) se genera
 en `_site/` durante la publicación; esa carpeta no está en el repositorio.
 
