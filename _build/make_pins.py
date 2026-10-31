@@ -28,7 +28,8 @@ for a in arts:
     hA, sA, hB, sB, _, _ = PINS[a["slug"]]
     cat = b.CATEGORIES[a["category"]]
     ic = b.icon(cat["icon"])
-    if a.get("image"):
+    # data-card heroes (state-*, vs-*) are text graphics that crop badly, so use the icon panel instead
+    if a.get("image") and not a["image"].startswith(("state-", "vs-")):
         media = f'<div class="media" style="background-image:url(\'file://{ROOT}/images/{a["image"]}\')"></div>'
     else:
         media = f'<div class="media iconmedia" style="background:linear-gradient(135deg,{GRAD[a["category"]]})"><div class="bigicon">{ic}</div></div>'

@@ -244,6 +244,8 @@ svg { display: block; width: 100%; height: 100%; }
 .calc-results dt { color: var(--muted); }
 .calc-results dd { font-weight: 700; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
 .calc-note { font-size: .85rem; color: var(--muted); margin-top: 16px; line-height: 1.5; }
+.calc-state { background: var(--green-50); border: 1px solid var(--green-100); border-radius: 10px; padding: 10px 14px; font-size: .92rem; color: var(--text); margin: 0 0 8px; }
+.calc-state a { font-weight: 600; white-space: nowrap; }
 
 /* =========================================================
    RESPONSIVE
