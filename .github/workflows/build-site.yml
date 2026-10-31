@@ -1,23 +1,19 @@
-name: Build site
+name: Build and deploy site
 
-# Rebuilds articles, the homepage ("Latest Guides" + full index), category pages
-# and sitemap.xml whenever article sources or the builder change.
+# Builds the website from content/ + static/ with tools/build.py and publishes
+# the result (_site/) to GitHub Pages. Generated files are never committed.
 on:
   push:
     branches: [main]
-    paths:
-      - "_src/**"
-      - "_build/**"
-      - "images/articles/**"
-      - "images/og/**"
-      - "images/brand/**"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: build-site
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -25,42 +21,63 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Build
         run: |
           pip install --quiet pillow
-          python3 _build/build.py
-      - name: Commit generated files
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898388+github-actions[bot]@users.noreply.github.com"
-          git add -A articles guides images/opt index.html 404.html feed.xml sitemap.xml about.html contact.html privacy.html terms.html quote.html
-          git diff --cached --name-only -- articles guides index.html > /tmp/changed.txt || true
-          if git diff --cached --quiet; then
-            echo "Nothing to commit"
-          else
-            git commit -m "Rebuild site from _src"
-            git push
-          fi
+          python3 tools/build.py
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
       - name: Notify search engines (IndexNow - Bing, Yandex, etc.)
-        continue-on-error: true
         run: |
           python3 - <<'PY'
-          import json, pathlib, urllib.request
+          import json, os, re, subprocess, urllib.request
           base = "https://vivavoltia.com/"
-          import os, re
+          key = "c997e84b4c26485daeac2cd1f82d74e2"
           if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch":
-              # manual run: submit every URL in the sitemap
-              urls = re.findall(r"<loc>(.*?)</loc>", pathlib.Path("sitemap.xml").read_text())
+              # manual run: submit every article plus the main pages
+              arts = [f[:-5] for f in os.listdir("content/articles") if f.endswith(".html")]
+              urls = [base, base + "quote.html"] + [f"{base}articles/{s}.html" for s in arts]
           else:
-              changed = [l.strip() for l in pathlib.Path("/tmp/changed.txt").read_text().splitlines() if l.strip().endswith(".html")]
-              urls = [base if c == "index.html" else base + c for c in changed]
+              diff = subprocess.run(["git", "diff", "--name-only", "HEAD~1", "HEAD"], capture_output=True, text=True).stdout.split()
+              urls = []
+              for f in diff:
+                  m = re.match(r"content/articles/([a-z0-9-]+)\.html$", f)
+                  if m:
+                      urls.append(f"{base}articles/{m.group(1)}.html")
+                  m = re.match(r"content/pages/([a-z0-9-]+)\.html$", f)
+                  if m and m.group(1) != "404":
+                      urls.append(f"{base}{m.group(1)}.html")
+              if any(u.startswith(base + "articles/") for u in urls):
+                  urls.append(base)
           if not urls:
               print("No changed pages to submit"); raise SystemExit
-          body = json.dumps({"host": "vivavoltia.com", "key": "c997e84b4c26485daeac2cd1f82d74e2",
-                             "keyLocation": base + "c997e84b4c26485daeac2cd1f82d74e2.txt", "urlList": urls[:10000]}).encode()
+          body = json.dumps({"host": "vivavoltia.com", "key": key,
+                             "keyLocation": f"{base}{key}.txt", "urlList": urls[:10000]}).encode()
           req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
                                        headers={"Content-Type": "application/json; charset=utf-8"})
           with urllib.request.urlopen(req, timeout=30) as r:

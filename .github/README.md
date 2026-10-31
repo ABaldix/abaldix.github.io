@@ -1,8 +1,14 @@
 # VivaVoltia.com
 
-Static site for [vivavoltia.com](https://vivavoltia.com), a US residential solar guide, hosted on GitHub Pages behind Cloudflare.
+Static site for [vivavoltia.com](https://vivavoltia.com), a US residential solar guide, served by GitHub Pages behind Cloudflare.
 
-- Write articles in `_src/articles/`; static pages in `_src/pages/`.
-- `_build/build.py` generates `articles/`, `guides/`, `index.html`, the static pages, `sitemap.xml` and `feed.xml`. The **Build site** GitHub Action runs it on every push and pings IndexNow.
-- Images live in `images/articles/` (article photos), `images/og/` (share images) and `images/brand/`; WebP variants in `images/opt/` are generated.
-- Full publishing guide (Spanish): [`_build/LEEME.md`](../_build/LEEME.md).
+| Folder | What it is |
+|---|---|
+| `content/` | Articles, static pages and the article template (what you edit) |
+| `static/` | Copied as-is to the site root: images, `style.css`, `CNAME`, `ads.txt`, verification files |
+| `tools/` | `build.py` (site generator), Pinterest and hero-image scripts |
+| `branding/` | Brand assets that are not published |
+
+Every push to `main` runs **Build and deploy site**: `tools/build.py` writes the full website to `_site/`, which is deployed to GitHub Pages, then changed URLs are sent to IndexNow. Generated HTML is never committed.
+
+Publishing guide (Spanish): [`LEEME.md`](../LEEME.md).
