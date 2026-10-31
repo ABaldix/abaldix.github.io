@@ -1,8 +1,8 @@
 // Renders data-card hero images (1600x900) for state guides and comparisons.
-// Usage: node _build/render_heroes.js   (needs Playwright + Chromium)
+// Usage: node _build/graphics/render_heroes.js   (needs Playwright + Chromium)
 const { chromium } = require('playwright');
 const path = require('path');
-const OUT = path.join(__dirname, '..', 'images');
+const OUT = path.join(__dirname, '..', '..', 'images', 'articles');
 
 const STATES = [
   ['state-california', 'California', '29.8¢', '5.8', 'NEM 3.0 net billing', 'Batteries now drive the savings'],

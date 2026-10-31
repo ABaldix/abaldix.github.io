@@ -8,7 +8,9 @@ on:
     paths:
       - "_src/**"
       - "_build/**"
-      - "images/*"
+      - "images/articles/**"
+      - "images/og/**"
+      - "images/brand/**"
   workflow_dispatch:
 
 permissions:

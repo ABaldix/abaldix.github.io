@@ -2,15 +2,15 @@
 """Generate Pinterest pin images (1000x1500) for every article.
 
 Usage (needs Playwright + Chromium, run locally):
-    python3 _build/make_pins.py        -> writes /tmp/pins.html and /tmp/pins.json
-    node _build/render_pins.js         -> renders images/pins/<slug>-a.jpg and -b.jpg
+    python3 _build/pinterest/make_pins.py        -> writes /tmp/pins.html and /tmp/pins.json
+    node _build/pinterest/render_pins.js         -> renders images/pins/<slug>-a.jpg and -b.jpg
 """
 import html, json, importlib.util, pathlib, sys
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
+ROOT = pathlib.Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location("b", ROOT / "_build" / "build.py")
 b = importlib.util.module_from_spec(spec); spec.loader.exec_module(b)
-sys.path.insert(0, str(ROOT / "_build"))
+sys.path.insert(0, str(ROOT / "_build" / "pinterest"))
 from pins_data import PINS
 
 GRAD = {"panels": "#ECFDF5,#FEF3C7", "batteries": "#D1FAE5,#ECFEFF", "inverters": "#F0FDF4,#E0F2FE",
@@ -30,7 +30,7 @@ for a in arts:
     ic = b.icon(cat["icon"])
     # data-card heroes (state-*, vs-*) are text graphics that crop badly, so use the icon panel instead
     if a.get("image") and not a["image"].startswith(("state-", "vs-")):
-        media = f'<div class="media" style="background-image:url(\'file://{ROOT}/images/{a["image"]}\')"></div>'
+        media = f'<div class="media" style="background-image:url(\'file://{ROOT}/images/{b.img_rel(a["image"])}\')"></div>'
     else:
         media = f'<div class="media iconmedia" style="background:linear-gradient(135deg,{GRAD[a["category"]]})"><div class="bigicon">{ic}</div></div>'
     blocks.append(f'''
