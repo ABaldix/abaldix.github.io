@@ -15,6 +15,10 @@ const STATES = [
   ['state-north-carolina', 'North Carolina', '14.9¢', '4.8', 'Duke Bridge Rate or TOU', 'PowerPair: up to $9,000 with a battery'],
   ['state-colorado', 'Colorado', '17.2¢', '5.4', 'Net metering (Xcel)', 'High-altitude sun, plan for hail'],
   ['state-illinois', 'Illinois', '19.3¢', '4.2', 'Supply-only net metering', 'Illinois Shines + $300/kW rebate'],
+  ['state-nevada', 'Nevada', '12.7¢', '6.1', '75% net metering (NV Energy)', 'Desert sun, credit locked for 20 years'],
+  ['state-georgia', 'Georgia', '15.9¢', '4.9', 'Instantaneous netting buyback', 'Size for self-use to make it pay'],
+  ['state-pennsylvania', 'Pennsylvania', '21.8¢', '4.0', '1:1 retail net metering', 'High prices + SREC income'],
+  ['state-virginia', 'Virginia', '17.6¢', '4.6', 'Annual net metering (NEM 2.0)', 'Regulators kept net metering in 2026'],
 ];
 const VS = [
   ['vs-enphase-powerwall', 'Battery comparison', ['Enphase IQ Battery 5P', [['5.0 kWh', 'per unit'], ['3.84 kW', 'continuous'], ['15 yr', 'warranty']]],
