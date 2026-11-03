@@ -18,6 +18,11 @@ const STATES = [
   ['state-nevada', 'Nevada', '12.7¢', '6.1', '75% net metering (NV Energy)', 'Desert sun, credit locked for 20 years'],
   ['state-georgia', 'Georgia', '15.9¢', '4.9', 'Instantaneous netting buyback', 'Size for self-use to make it pay'],
   ['state-pennsylvania', 'Pennsylvania', '21.8¢', '4.0', '1:1 retail net metering', 'High prices + SREC income'],
+  ['state-maryland', 'Maryland', '21.4¢', '4.4', 'Full retail net metering', 'Net metering + SREC income'],
+  ['state-south-carolina', 'South Carolina', '15.8¢', '4.9', 'Solar Choice (Duke, Dominion)', '25% state tax credit still active'],
+  ['state-utah', 'Utah', '13.3¢', '5.5', 'Net billing (~4–6¢ exports)', 'Great sun, cheap power: size for self-use'],
+  ['state-michigan', 'Michigan', '23.0¢', '3.9', 'Inflow/outflow billing', 'High prices offset modest sun'],
+  ['state-connecticut', 'Connecticut', '24.5¢', '4.0', 'RRES Netting or Buy-All', 'Buy-All pays ~32.9¢ for 20 years'],
   ['state-virginia', 'Virginia', '17.6¢', '4.6', 'Annual net metering (NEM 2.0)', 'Regulators kept net metering in 2026'],
 ];
 const VS = [
