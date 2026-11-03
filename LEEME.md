@@ -66,6 +66,13 @@ en "Solar by State" y al final de cada artículo **en cuanto pegues el formulari
 2. En GitHub, abre `content/partials/newsletter-form.html`, pega el código y guarda.
    Si el archivo está vacío, el recuadro no aparece en ningún sitio.
 
+### Captcha (Cloudflare Turnstile)
+
+El formulario usa Turnstile cuando `content/partials/newsletter-form.html` tiene rellenos
+`data-endpoint` (URL del Worker) y `data-sitekey` (clave pública de Turnstile). El código
+del Worker está en `tools/workers/newsletter-subscribe.js`; sus claves secretas
+(`TURNSTILE_SECRET`, `MAILERLITE_API_KEY`) se guardan solo en Cloudflare, nunca en el repo.
+
 ## Estructura del repositorio
 
 ```
@@ -73,6 +80,7 @@ content/articles/        Un archivo por artículo          ← aquí escribes
 content/pages/           Páginas fijas: about, contact, privacy, terms, calculadora (quote), 404
 content/templates/       Plantilla para artículos nuevos
 content/partials/        Fragmentos reutilizables (formulario de la newsletter)
+tools/workers/           Worker de Cloudflare de la newsletter (captcha Turnstile + alta en MailerLite)
 static/                  Se copia tal cual a la raíz de la web:
   images/articles/         fotos y portadas de artículos   ← aquí subes imágenes
   images/og/               imágenes para compartir (portada y categorías)

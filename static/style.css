@@ -372,3 +372,5 @@ svg { display: block; width: 100%; height: 100%; }
 .nl-err { color: #FECACA !important; }
 @media (max-width: 480px) { .nl-row { flex-direction: column; } }
 .nl-hp { position: absolute; left: -5000px; width: 1px; height: 1px; overflow: hidden; }
+.nl-captcha:empty { display: none; }
+.nl-captcha { margin-top: 10px; }
