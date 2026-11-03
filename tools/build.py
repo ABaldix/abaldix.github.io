@@ -265,6 +265,12 @@ def og_image_for(a):
 
 # ---------------------------------------------------------------- layout
 
+def asset_version(rel):
+    """Short content hash so browsers and Cloudflare fetch a new copy whenever the file changes."""
+    import hashlib
+    return hashlib.md5((STATIC / rel).read_bytes()).hexdigest()[:8]
+
+
 def head(title, description, canonical, prefix, og_type="website", image=None, extra="", robots="index, follow, max-image-preview:large, max-snippet:-1"):
     image = image or "og-home.jpg"
     img = f"{BASE}/images/{img_rel(image)}"
@@ -298,7 +304,7 @@ def head(title, description, canonical, prefix, og_type="website", image=None, e
     <link rel="icon" type="image/png" href="/images/brand/icono.png">
     <link rel="apple-touch-icon" href="/images/brand/icono.png">
     <link rel="alternate" type="application/rss+xml" title="VivaVoltia Guides" href="{BASE}/feed.xml">
-    <link rel="stylesheet" href="{prefix}style.css">
+    <link rel="stylesheet" href="{prefix}style.css?v={asset_version("style.css")}">
 {extra}
     <!-- Consent banner (Usercentrics CMP) - must load first -->
     <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="{CMP}" async></script>
@@ -978,7 +984,7 @@ def render_page(path):
                extra=meta.get("head", "").replace("\\n", "\n"),
                robots="noindex, follow" if is404 else "index, follow, max-image-preview:large, max-snippet:-1")
     out += header(prefix)
-    out += body
+    out += body.replace('src="js/solar-states.js"', f'src="js/solar-states.js?v={asset_version("js/solar-states.js")}"')
     out += footer(prefix)
     return out
 
