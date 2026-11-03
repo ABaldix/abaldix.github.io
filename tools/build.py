@@ -329,11 +329,56 @@ def header(prefix):
             <div class="logo"><a href="/">VivaVoltia</a></div>
             <nav class="nav-links" aria-label="Main">
 {links}
+                <a href="{prefix}solar-by-state.html">By State</a>
             </nav>
-            <a href="{prefix}quote.html" class="btn-cta-header">Solar Calculator</a>
+            <a href="{prefix}calculators.html" class="btn-cta-header">Calculators</a>
         </div>
     </header>
 """
+
+
+NEWSLETTER_FILE = SRC / "partials" / "newsletter-form.html"
+
+
+def newsletter(prefix, compact=False):
+    """Email signup box. Renders only once the MailerLite form has been pasted into
+    content/partials/newsletter-form.html (empty file = no box anywhere)."""
+    form = NEWSLETTER_FILE.read_text(encoding="utf-8").strip() if NEWSLETTER_FILE.exists() else ""
+    if not form:
+        return ""
+    cls = "newsletter newsletter--compact" if compact else "newsletter"
+    return f"""
+        <section class="{cls}" aria-labelledby="nl-title">
+            <div class="newsletter-copy">
+                <h2 id="nl-title">Get solar savings tips by email</h2>
+                <p>New state guides, changes to net metering and incentives, and seasonal tips for solar and battery owners. Occasional emails, no spam, unsubscribe anytime. See our <a href="{prefix}privacy.html">privacy policy</a>.</p>
+            </div>
+            <div class="newsletter-form">
+{form}
+            </div>
+        </section>
+"""
+
+
+def article_cta(a, prefix):
+    """Point each article at the most relevant calculator."""
+    slug = a["slug"]
+    if a.get("state_code"):
+        name = a["title"].split(" in ")[1].split(" in 20")[0] if " in " in a["title"] else "your state"
+        return ("Run the numbers for your home",
+                f"Our calculator loads {name}'s average electricity price, sunshine, and export credit so you can test your own bill.",
+                f"{prefix}quote.html?state={a['state_code']}", f"Open the {name} Calculator")
+    if slug in ("solar-and-ev-charging",):
+        return ("How many panels for your EV?", "Estimate the extra solar needed to charge your electric car and your savings versus gasoline.",
+                f"{prefix}solar-ev-calculator.html", "Open the Solar + EV Calculator")
+    if a["category"] == "batteries" or slug in ("do-solar-panels-work-during-power-outage",):
+        return ("Size your backup battery", "Pick the appliances you want to keep running in an outage and see how many kWh and which batteries you need.",
+                f"{prefix}battery-calculator.html", "Open the Battery Calculator")
+    if slug in ("how-many-solar-panels-do-i-need", "solar-panel-orientation-and-tilt", "cost-solar-panels-2000-sq-ft", "monocrystalline-panels", "best-solar-panels-for-homes"):
+        return ("How many panels do you need?", "Turn your monthly kWh into system size, panel count, and roof space for your state.",
+                f"{prefix}solar-panel-calculator.html", "Open the Panel Calculator")
+    return ("Estimate your own numbers", "Use our free calculator to estimate system size, upfront cost, and payback for your home with 2026 prices.",
+            f"{prefix}quote.html", "Open the Solar Calculator")
 
 
 def footer(prefix):
@@ -355,9 +400,21 @@ def footer(prefix):
                 </ul>
             </div>
             <div>
+                <p class="footer-h">Tools</p>
+                <ul>
+                    <li><a href="{prefix}quote.html">Solar Payback Calculator</a></li>
+                    <li><a href="{prefix}solar-panel-calculator.html">Solar Panel Calculator</a></li>
+                    <li><a href="{prefix}battery-calculator.html">Battery Size Calculator</a></li>
+                    <li><a href="{prefix}solar-ev-calculator.html">Solar + EV Calculator</a></li>
+                    <li><a href="{prefix}solar-by-state.html">Solar by State</a></li>
+                </ul>
+            </div>
+            <div>
                 <p class="footer-h">Company</p>
                 <ul>
                     <li><a href="{prefix}about.html">About Us</a></li>
+                    <li><a href="{prefix}how-we-research.html">How We Research</a></li>
+                    <li><a href="{prefix}editorial-policy.html">Editorial Policy</a></li>
                     <li><a href="{prefix}contact.html">Contact</a></li>
                     <li><a href="{prefix}privacy.html">Privacy Policy</a></li>
                     <li><a href="{prefix}terms.html">Terms &amp; Disclaimer</a></li>
@@ -484,6 +541,7 @@ def render_article(a, arts):
         pillar = ('            <p class="pillar-link">New to solar? Our <a href="home-solar-guide.html">complete home solar guide</a> '
                   'walks through costs, equipment, batteries, incentives, and installation step by step.</p>\n')
     rel = related_for(a, arts)
+    cta = article_cta(a, prefix)
     rel_cards = "\n".join(card(x, prefix) for x in rel)
 
     updated_line = f'Updated <time datetime="{a["updated_d"].isoformat()}">{fmt_date(a["updated_d"])}</time>'
@@ -564,17 +622,17 @@ def render_article(a, arts):
 
         <aside class="cta-box">
             <div>
-                <p class="cta-title">Estimate your own numbers</p>
-                <p>Use our free calculator to estimate system size, upfront cost, and payback for your home with 2026 prices.</p>
+                <p class="cta-title">{cta[0]}</p>
+                <p>{esc(cta[1])}</p>
             </div>
-            <a href="{prefix}quote.html" class="btn-cta-main">Open the Solar Calculator</a>
+            <a href="{cta[2]}" class="btn-cta-main">{esc(cta[3])}</a>
         </aside>
-
+{newsletter(prefix, compact=True)}
         <div class="author-box">
             <span class="author-img">{icon('panel')}</span>
             <div class="author-info">
                 <p class="author-name">About VivaVoltia</p>
-                <p>VivaVoltia publishes independent guides for US homeowners considering solar panels and home batteries. We base our articles on public sources such as the IRS, the U.S. Department of Energy, NREL, the EIA, and manufacturer specifications, and we update them when rules change. <a href="{prefix}about.html">How we research our guides</a>.</p>
+                <p>VivaVoltia publishes independent guides for US homeowners considering solar panels and home batteries. We base our articles on public sources such as the IRS, the U.S. Department of Energy, NREL, the EIA, and manufacturer specifications, and we update them when rules change. <a href="{prefix}how-we-research.html">How we research our guides</a>.</p>
             </div>
         </div>
     </main>
@@ -678,6 +736,24 @@ def render_index(arts):
                 </ul>
             </div>""")
 
+    rows = state_rows(arts)
+    recent = sorted(arts, key=lambda a: (a["updated_d"], a["published_d"], a["order"]), reverse=True)[:5]
+    recent_html = "\n".join(
+        f'                <li><a href="articles/{a["slug"]}.html">{esc(a["title"])}</a><span>Updated {a["updated_d"].strftime("%b %-d, %Y")}</span></li>'
+        for a in recent)
+    SITUATIONS = [
+        ("My electric bill keeps going up", "are-solar-panels-worth-it"),
+        ("I want power during outages", "do-solar-panels-work-during-power-outage"),
+        ("I'm buying an electric car", "solar-and-ev-charging"),
+        ("My roof is old or metal", "solar-panels-on-metal-roof"),
+        ("I got a quote and I'm not sure", "how-to-compare-solar-quotes"),
+        ("I'm thinking of leasing", "solar-lease-vs-buy"),
+        ("My HOA might say no", "can-hoa-stop-you-from-getting-solar"),
+        ("I might sell my house", "do-solar-panels-increase-home-value"),
+    ]
+    sit_html = "\n".join(f'                <a href="articles/{slug}.html" class="situation">{esc(t)} <span aria-hidden="true">→</span></a>'
+                          for t, slug in SITUATIONS)
+
     fimg = (f'<div class="featured-media">{picture(featured["image"], featured.get("image_alt", ""), "", "(max-width: 960px) 100vw, 640px")}</div>'
             if featured.get("image") else f'<div class="featured-media card-media--icon cat-{featured["category"]}">{icon(CATEGORIES[featured["category"]]["icon"])}</div>')
 
@@ -732,6 +808,22 @@ def render_index(arts):
         </section>
 
         <section class="home-section">
+            <h2 class="section-title">What's your situation?</h2>
+            <div class="situation-grid">
+{sit_html}
+            </div>
+        </section>
+
+        <section class="home-section">
+            <div class="section-head">
+                <h2 class="section-title">Is Solar Worth It in Your State?</h2>
+                <a href="solar-by-state.html">Compare all states →</a>
+            </div>
+            <p class="section-sub">Typical payback for a purchased system in 2026, without the federal credit. Click a state for its guide.</p>
+            {payback_scale(rows, "")}
+        </section>
+
+        <section class="home-section">
             <h2 class="section-title">Explore by Topic</h2>
             <div class="silo-grid">
 {silos}
@@ -740,18 +832,135 @@ def render_index(arts):
 
         <section class="home-section tool-band">
             <div>
-                <h2>How much would solar save you?</h2>
-                <p>Our free calculator estimates system size, upfront cost, and payback using 2026 prices and your own electricity rate. Nothing you enter leaves your browser.</p>
+                <h2>Free solar calculators</h2>
+                <p>Estimate payback with your state's electricity price, how many panels you need, the battery size for outages, and how much solar it takes to charge an EV. Nothing you enter leaves your browser.</p>
             </div>
-            <a href="quote.html" class="btn-cta-main">Open the Solar Calculator</a>
+            <a href="calculators.html" class="btn-cta-main">See All Calculators</a>
         </section>
 
+        <section class="home-section home-split">
+            <div class="recent-box">
+                <h2 class="section-title">Recently Updated</h2>
+                <ul class="recent-list">
+{recent_html}
+                </ul>
+            </div>
+            <div class="sources-box">
+                <h2 class="section-title">How We Work</h2>
+                <p>We don't sell or install solar. Our numbers come from public sources you can check:</p>
+                <ul class="source-badges">
+                    <li>EIA electricity prices</li><li>NREL sunshine data</li><li>IRS tax rules</li><li>State utility commissions</li><li>DSIRE incentives</li><li>Manufacturer datasheets</li>
+                </ul>
+                <p><a href="how-we-research.html">How we research</a> · <a href="editorial-policy.html">Editorial policy</a></p>
+            </div>
+        </section>
+{newsletter("")}
         <section class="home-section" id="guides">
             <h2 class="section-title">All Solar Guides</h2>
             <div class="guides-index">
 {chr(10).join(groups)}
             </div>
         </section>
+    </main>
+"""
+    out += footer(prefix)
+    return out
+
+# ---------------------------------------------------------------- solar by state hub
+
+PAYBACK_BANDS = [  # (max typical years, label, css class)
+    (8.5, "Under ~8 years", "pb-1"),
+    (11.5, "About 8–11 years", "pb-2"),
+    (14.5, "About 11–14 years", "pb-3"),
+    (99, "14+ years", "pb-4"),
+]
+
+
+def state_rows(arts):
+    """State guides with their metadata, sorted by typical payback."""
+    js = (STATIC / "js" / "solar-states.js").read_text(encoding="utf-8")
+    data = {m[0]: (m[1], float(m[2]), float(m[3])) for m in re.findall(r'(\w\w): \["([^"]+)", ([\d.]+), ([\d.]+)', js)}
+    rows = []
+    for a in arts:
+        code = a.get("state_code")
+        if not code:
+            continue
+        lo, hi = (float(x) for x in a["payback"].split("-"))
+        name, price, sun = data[code]
+        rows.append({"a": a, "code": code, "name": name, "price": price, "sun": sun,
+                     "lo": lo, "hi": hi, "mid": (lo + hi) / 2, "policy": a.get("state_policy", "")})
+    rows.sort(key=lambda r: (r["mid"], r["name"]))
+    for r in rows:
+        r["band"] = next(b for b in PAYBACK_BANDS if r["mid"] <= b[0])
+    return rows
+
+
+def payback_scale(rows, prefix):
+    cols = []
+    for maxy, label, cls in PAYBACK_BANDS:
+        chips = "".join(f'<a href="{prefix}articles/{r["a"]["slug"]}.html" class="state-chip" title="{esc(r["name"])}: about {r["lo"]:g}–{r["hi"]:g} years">{r["code"]}</a>'
+                        for r in rows if r["band"][2] == cls)
+        cols.append(f'<div class="pb-col {cls}"><div class="pb-bar"></div><p class="pb-label">{label}</p><div class="pb-chips">{chips or "<span class=pb-empty>–</span>"}</div></div>')
+    return '<div class="payback-scale" role="group" aria-label="Typical solar payback by state">' + "".join(cols) + "</div>"
+
+
+def render_state_hub(arts):
+    prefix = ""
+    rows = state_rows(arts)
+    trs = "\n".join(
+        f"""                <tr>
+                    <td><a href="articles/{r['a']['slug']}.html"><strong>{esc(r['name'])}</strong></a></td>
+                    <td>{r['price'] * 100:.1f}¢</td>
+                    <td>{r['sun']:.1f}</td>
+                    <td>{esc(r['policy'])}</td>
+                    <td><span class="pb-pill {r['band'][2]}">{r['lo']:g}–{r['hi']:g} yrs</span></td>
+                    <td><a href="quote.html?state={r['code']}">Calculate →</a></td>
+                </tr>""" for r in rows)
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Solar by State", "url": f"{BASE}/solar-by-state.html",
+          "isPartOf": {"@id": f"{BASE}/#website"},
+          "mainEntity": {"@type": "ItemList", "itemListElement": [
+              {"@type": "ListItem", "position": i + 1, "url": f"{BASE}/articles/{r['a']['slug']}.html", "name": r["a"]["title"]}
+              for i, r in enumerate(rows)]}}
+    out = head("Is Solar Worth It in Your State? 2026 Guides by State | VivaVoltia",
+               f"Solar payback, electricity prices, net metering and incentives in {len(rows)} US states for 2026. Compare states and read the full guide for yours.",
+               f"{BASE}/solar-by-state.html", prefix, image="og-costs.jpg",
+               extra=f'    <script type="application/ld+json">{json.dumps(ld)}</script>\n')
+    out += header(prefix)
+    out += f"""
+    <main class="container" style="padding: 56px 20px;">
+        <div class="text-center">
+            <span class="eyebrow">Updated for 2026</span>
+            <h1 style="font-size: 2.4rem; color: #111827; margin: 10px 0 14px;">Is Solar Worth It in Your State?</h1>
+            <p style="font-size: 1.1rem; color: #4B5563; max-width: 720px; margin: 0 auto;">Solar pays off very differently from state to state. Electricity prices, sunshine, how your utility credits exported power, and state incentives all matter more now that the federal homeowner credit is gone. Here is how {len(rows)} states compare.</p>
+        </div>
+
+        <section class="home-section">
+            <h2 class="section-title">Typical Payback by State</h2>
+            <p class="section-sub">Typical payback for a purchased system on a home using 900 kWh a month, at $2.85 per watt, with no federal credit. Click a state for its full guide.</p>
+            {payback_scale(rows, prefix)}
+        </section>
+
+        <section class="home-section">
+            <h2 class="section-title">Compare States</h2>
+            <div class="table-wrap">
+            <table class="state-table">
+                <thead><tr><th>State</th><th>Avg. price (Aug 2026)</th><th>Peak sun hours</th><th>How exports are credited</th><th>Typical payback</th><th></th></tr></thead>
+                <tbody>
+{trs}
+                </tbody>
+                <caption>Prices: EIA, Electric Power Monthly (August 2026). Sun hours: rounded state averages from NREL. Payback: VivaVoltia estimates using the method in <a href="how-we-research.html">How We Research</a>; state incentives included where a typical homeowner can use them.</caption>
+            </table>
+            </div>
+        </section>
+
+        <section class="home-section tool-band">
+            <div>
+                <h2>Your state isn't listed yet?</h2>
+                <p>Our calculator covers all 50 states and Washington, D.C., with each state's average electricity price and sunshine. For incentives, see <a href="articles/solar-incentives-by-state.html">Solar Incentives by State</a>.</p>
+            </div>
+            <a href="quote.html" class="btn-cta-main">Open the Solar Calculator</a>
+        </section>
+{newsletter(prefix)}
     </main>
 """
     out += footer(prefix)
@@ -876,6 +1085,8 @@ def main():
         (OUT / f"{p.stem}.html").write_text(render_page(p), encoding="utf-8")
         if p.stem != "404":
             pages.append(p.stem)
+    (OUT / "solar-by-state.html").write_text(render_state_hub(arts), encoding="utf-8")
+    pages.append("solar-by-state")
     (OUT / "sitemap.xml").write_text(render_sitemap(arts, pages), encoding="utf-8")
     (OUT / "feed.xml").write_text(render_feed(arts), encoding="utf-8")
     (OUT / ".nojekyll").write_text("")

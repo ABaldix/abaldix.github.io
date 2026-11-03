@@ -1,0 +1,110 @@
+---
+title: Solar + EV Calculator: Panels to Charge an Electric Car | VivaVoltia
+description: Free solar EV calculator: see how many extra solar panels you need to charge an electric car, and how charging on solar compares with the grid and gasoline.
+---
+
+    <main class="container" style="padding: 60px 20px;">
+        <div class="text-center">
+            <h1 style="font-size: 2.5rem; color: #111827; margin-bottom: 15px;">Solar + EV Charging Calculator</h1>
+            <p style="font-size: 1.1rem; color: #4B5563; max-width: 680px; margin: 0 auto;">How many extra panels would it take to drive on sunshine? Enter how much you drive and where you live to see the added energy, panels, and yearly fuel savings compared with gasoline.</p>
+        </div>
+
+        <div class="calc-layout">
+            <form class="calc-card" id="calc" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="state">Your state</label>
+                    <select id="state"><option value="">Choose your state (optional)</option></select>
+                    <small>Fills in your average electricity price and sun hours.</small>
+                </div>
+                <div class="form-group">
+                    <label for="miles">Miles driven per year</label>
+                    <input type="number" id="miles" min="1000" max="60000" step="500" value="12000" inputmode="decimal">
+                </div>
+                <div class="form-group">
+                    <label for="eff">EV efficiency (kWh per 100 miles)</label>
+                    <input type="number" id="eff" min="20" max="60" step="1" value="30" inputmode="decimal">
+                    <small>About 25–30 for efficient sedans, 35–45 for SUVs and pickups.</small>
+                </div>
+                <div class="form-group">
+                    <label for="rate">Electricity price ($ per kWh)</label>
+                    <input type="number" id="rate" min="0.05" max="1" step="0.005" value="0.182" inputmode="decimal">
+                </div>
+                <div class="form-group">
+                    <label for="sun">Peak sun hours per day</label>
+                    <input type="number" id="sun" min="2" max="7.5" step="0.1" value="4.5" inputmode="decimal">
+                </div>
+                <div class="form-group">
+                    <label for="gas">Gasoline price ($ per gallon)</label>
+                    <input type="number" id="gas" min="1" max="10" step="0.05" value="3.20" inputmode="decimal">
+                </div>
+                <div class="form-group">
+                    <label for="mpg">Gas car fuel economy (mpg)</label>
+                    <input type="number" id="mpg" min="10" max="60" step="1" value="28" inputmode="decimal">
+                </div>
+            </form>
+
+            <section class="calc-card calc-results" aria-live="polite">
+                <h2>Your Estimate</h2>
+                <dl>
+                    <div><dt>Extra electricity per year</dt><dd id="r-kwh">–</dd></div>
+                    <div><dt>Extra solar needed</dt><dd id="r-kw">–</dd></div>
+                    <div><dt>Extra panels (420 W)</dt><dd id="r-n">–</dd></div>
+                    <div><dt>Cost to add those panels</dt><dd id="r-cost">–</dd></div>
+                    <div><dt>Gasoline cost per year</dt><dd id="r-gascost">–</dd></div>
+                    <div><dt>Grid charging cost per year</dt><dd id="r-grid">–</dd></div>
+                    <div><dt>Savings vs gasoline (solar-charged)</dt><dd id="r-save">–</dd></div>
+                </dl>
+                <p class="calc-note">Includes about 10% charging losses and 80% solar system efficiency. "Solar-charged" assumes your panels cover the EV's yearly energy through net metering or daytime charging; where exports earn less than retail, charge during sunny hours to get the most value. Gas price is an editable example: use your local price.</p>
+            </section>
+        </div>
+
+        <section class="article-container" style="margin-top: 40px;">
+            <article class="article-content">
+                <h2>How the Numbers Work</h2>
+                <p>Yearly EV energy = miles × kWh per mile × 1.1 for charging losses. Extra solar (kW) = that energy ÷ (sun hours × 365 × 0.8). Gasoline cost = miles ÷ mpg × price per gallon. Grid charging cost = EV energy × your electricity price. Once paid off, solar-charged miles cost almost nothing.</p>
+                <h2>Next Steps</h2>
+                <ul>
+                    <li>Read the full guide: <a href="articles/solar-and-ev-charging.html">Solar Panels and EV Charging</a>.</li>
+                    <li>Size your whole system: <a href="solar-panel-calculator.html">How Many Solar Panels Do I Need? calculator</a>.</li>
+                    <li>Check payback with your new usage: <a href="quote.html">Solar payback calculator</a>.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script src="js/solar-states.js"></script>
+    <script>
+    (function () {
+        function el(id) { return document.getElementById(id); }
+        function num(id) { var v = parseFloat(el(id).value); return isNaN(v) ? 0 : v; }
+        var money = function (n) { return "$" + (Math.round(n / 10) * 10).toLocaleString("en-US"); };
+        var sel = el("state");
+        window.vvFillStates(sel);
+        sel.addEventListener("change", function () {
+            var st = window.VV_STATES[sel.value];
+            if (st) { el("rate").value = st[1].toFixed(3); el("sun").value = st[2].toFixed(1); }
+            calc();
+        });
+        function calc() {
+            var miles = num("miles"), eff = num("eff") / 100, rate = num("rate"), sun = num("sun"), gas = num("gas"), mpg = num("mpg");
+            var out = function (id, t) { el(id).textContent = t; };
+            if (miles <= 0 || eff <= 0 || sun <= 0) {
+                ["r-kwh", "r-kw", "r-n", "r-cost", "r-gascost", "r-grid", "r-save"].forEach(function (i) { out(i, "–"); });
+                return;
+            }
+            var kwh = miles * eff * 1.1;
+            var kw = kwh / (sun * 365 * 0.8);
+            var n = Math.ceil(kw * 1000 / 420);
+            var gasCost = mpg > 0 ? miles / mpg * gas : 0;
+            out("r-kwh", Math.round(kwh).toLocaleString("en-US") + " kWh");
+            out("r-kw", kw.toFixed(1) + " kW");
+            out("r-n", n + " panels");
+            out("r-cost", money(n * 420 * 2.85));
+            out("r-gascost", money(gasCost));
+            out("r-grid", money(kwh * rate));
+            out("r-save", money(gasCost) + " per year");
+        }
+        el("calc").addEventListener("input", calc);
+        el("calc").addEventListener("change", calc);
+        calc();
+    })();
+    </script>

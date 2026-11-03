@@ -1,0 +1,123 @@
+---
+title: Solar Battery Size Calculator: How Much Backup Do You Need? | VivaVoltia
+description: Free solar battery calculator: pick the appliances you want to keep running in an outage and see how many kWh, which batteries, and roughly what it costs.
+---
+
+    <main class="container" style="padding: 60px 20px;">
+        <div class="text-center">
+            <h1 style="font-size: 2.5rem; color: #111827; margin-bottom: 15px;">Solar Battery Size Calculator</h1>
+            <p style="font-size: 1.1rem; color: #4B5563; max-width: 680px; margin: 0 auto;">Choose what you want to keep running during a power outage and for how long. We estimate the battery capacity and power you need, how many units of popular batteries that takes, and a rough installed cost.</p>
+        </div>
+
+        <div class="calc-layout">
+            <form class="calc-card" id="calc" onsubmit="return false;">
+                <fieldset class="calc-fieldset">
+                    <legend>What do you want to back up?</legend>
+                    <div class="check-grid" id="loads"></div>
+                </fieldset>
+                <div class="form-group">
+                    <label for="hours">How long should backup last? (hours)</label>
+                    <input type="number" id="hours" min="2" max="96" step="1" value="24" inputmode="decimal">
+                    <small>24 hours covers most short outages. With solar recharging the battery each day, it can last much longer in sunny weather.</small>
+                </div>
+                <div class="form-group">
+                    <label for="cpk">Installed cost per kWh of storage ($)</label>
+                    <input type="number" id="cpk" min="500" max="2500" step="50" value="1100" inputmode="decimal">
+                    <small>Typical 2026 installed prices run about $900 to $1,300 per kWh before incentives.</small>
+                </div>
+            </form>
+
+            <section class="calc-card calc-results" aria-live="polite">
+                <h2>Your Estimate</h2>
+                <dl>
+                    <div><dt>Daily energy for these loads</dt><dd id="r-daily">–</dd></div>
+                    <div><dt>Usable storage needed</dt><dd id="r-kwh">–</dd></div>
+                    <div><dt>Continuous power needed</dt><dd id="r-kw">–</dd></div>
+                    <div><dt>Startup surge to handle</dt><dd id="r-surge">–</dd></div>
+                    <div><dt>Tesla Powerwall 3 (13.5 kWh, 11.5 kW)</dt><dd id="r-pw">–</dd></div>
+                    <div><dt>FranklinWH aPower 2 (15 kWh, 10 kW)</dt><dd id="r-fr">–</dd></div>
+                    <div><dt>Enphase IQ Battery 5P (5 kWh, 3.84 kW)</dt><dd id="r-en">–</dd></div>
+                    <div><dt>Rough installed cost</dt><dd id="r-cost">–</dd></div>
+                </dl>
+                <p class="calc-note">Load figures are typical averages; your appliances may use more or less. We add 10% for inverter losses and keep a small reserve. Unit counts must cover both the energy (kWh) and the power (kW) you need. Costs are before any state or utility battery rebates, and assume at least 5 kWh, the smallest common home battery. Always have an installer do a proper load calculation before you buy.</p>
+            </section>
+        </div>
+
+        <section class="article-container" style="margin-top: 40px;">
+            <article class="article-content">
+                <h2>How This Battery Calculator Works</h2>
+                <p>Each appliance has a typical daily energy use (kWh per day), a typical running power (watts), and for motors like air conditioners and well pumps, a startup surge. We add up the daily energy for your selections, scale it to the number of hours you chose, and add about 10% for losses. Then we check two limits for each battery: whether enough units store the energy, and whether they can deliver the power your loads draw at the same time.</p>
+                <h2>Next Steps</h2>
+                <ul>
+                    <li>Compare prices in <a href="articles/solar-battery-cost.html">How Much Does a Solar Battery Cost?</a></li>
+                    <li>See the top batteries side by side: <a href="articles/enphase-iq-5p-vs-powerwall-3.html">Enphase IQ 5P vs. Powerwall 3</a> and <a href="articles/powerwall-3-vs-franklinwh-apower-2.html">Powerwall 3 vs. FranklinWH aPower 2</a>.</li>
+                    <li>Decide whether you need storage at all: <a href="articles/solar-with-or-without-battery.html">Solar With or Without a Battery</a>.</li>
+                    <li>Learn how solar behaves in a blackout: <a href="articles/do-solar-panels-work-during-power-outage.html">Do Solar Panels Work During a Power Outage?</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script>
+    (function () {
+        // [id, label, kWh per day, running W, surge W, checked by default]
+        var LOADS = [
+            ["fridge", "Refrigerator", 1.5, 200, 1200, true],
+            ["lights", "LED lights (whole house)", 0.8, 300, 0, true],
+            ["internet", "Wi-Fi, phones and laptops", 0.5, 150, 0, true],
+            ["tv", "TV and entertainment", 0.6, 200, 0, false],
+            ["freezer", "Chest freezer", 1.0, 150, 900, false],
+            ["furnace", "Gas furnace blower", 2.0, 500, 1500, false],
+            ["sump", "Sump pump", 0.5, 800, 2400, false],
+            ["well", "Well pump", 1.5, 1000, 3500, false],
+            ["cpap", "Medical device (CPAP)", 0.4, 60, 0, false],
+            ["microwave", "Microwave", 0.5, 1200, 0, false],
+            ["washer", "Washing machine", 0.6, 500, 1200, false],
+            ["ac", "Central air conditioner (3 ton)", 18, 3500, 9000, false],
+            ["heatpump", "Heat pump (heating, mild weather)", 20, 3500, 9000, false],
+            ["waterheater", "Electric water heater", 4, 4500, 0, false],
+            ["range", "Electric range / oven", 2, 3000, 0, false]
+        ];
+        var BATT = [["pw", 13.5, 11.5], ["fr", 15, 10], ["en", 5, 3.84]];
+        var box = document.getElementById("loads");
+        LOADS.forEach(function (l) {
+            var lab = document.createElement("label");
+            lab.className = "check";
+            lab.innerHTML = '<input type="checkbox" id="l-' + l[0] + '"' + (l[5] ? " checked" : "") + '> <span>' + l[1] + '</span>';
+            box.appendChild(lab);
+        });
+        function el(id) { return document.getElementById(id); }
+        function num(id) { var v = parseFloat(el(id).value); return isNaN(v) ? 0 : v; }
+        function calc() {
+            var daily = 0, run = 0, maxSurgeExtra = 0;
+            LOADS.forEach(function (l) {
+                if (el("l-" + l[0]).checked) {
+                    daily += l[2]; run += l[3];
+                    if (l[4] > l[3]) maxSurgeExtra = Math.max(maxSurgeExtra, l[4] - l[3]);
+                }
+            });
+            var hours = Math.max(num("hours"), 1);
+            var out = function (id, t) { el(id).textContent = t; };
+            if (daily === 0) {
+                ["r-daily", "r-kwh", "r-kw", "r-surge", "r-pw", "r-fr", "r-en", "r-cost"].forEach(function (i) { out(i, "–"); });
+                return;
+            }
+            var kwh = daily * hours / 24 * 1.1;
+            // loads rarely all run at once: assume 70% diversity on running power
+            var kw = run / 1000 * 0.7;
+            var surge = kw + maxSurgeExtra / 1000;
+            out("r-daily", daily.toFixed(1) + " kWh per day");
+            out("r-kwh", kwh.toFixed(1) + " kWh");
+            out("r-kw", kw.toFixed(1) + " kW");
+            out("r-surge", maxSurgeExtra > 0 ? surge.toFixed(1) + " kW for a few seconds" : "No large motors");
+            BATT.forEach(function (b) {
+                var n = Math.max(Math.ceil(kwh / b[1]), Math.ceil(kw / b[2]), 1);
+                out("r-" + b[0], n + (n === 1 ? " unit" : " units") + " (" + (n * b[1]).toFixed(1) + " kWh)");
+            });
+            var c = Math.max(kwh, 5) * num("cpk");  // smallest common home battery is about 5 kWh
+            out("r-cost", "$" + (Math.round(c / 500) * 500).toLocaleString("en-US") + " to $" + (Math.round(c * 1.25 / 500) * 500).toLocaleString("en-US"));
+        }
+        el("calc").addEventListener("input", calc);
+        el("calc").addEventListener("change", calc);
+        calc();
+    })();
+    </script>

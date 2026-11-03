@@ -55,12 +55,24 @@ pestaña **Actions** verás el error. Así no quedan enlaces rotos.
     python3 tools/build.py      # la web queda en la carpeta _site/
 
 
+## Newsletter (MailerLite)
+
+El recuadro "Get solar savings tips by email" aparece automáticamente en la portada,
+en "Solar by State" y al final de cada artículo **en cuanto pegues el formulario** en
+`content/partials/newsletter-form.html`:
+
+1. En MailerLite: **Forms → Embedded forms → crea uno** (solo el campo email) y copia
+   el código HTML (pestaña "HTML code").
+2. En GitHub, abre `content/partials/newsletter-form.html`, pega el código y guarda.
+   Si el archivo está vacío, el recuadro no aparece en ningún sitio.
+
 ## Estructura del repositorio
 
 ```
 content/articles/        Un archivo por artículo          ← aquí escribes
 content/pages/           Páginas fijas: about, contact, privacy, terms, calculadora (quote), 404
 content/templates/       Plantilla para artículos nuevos
+content/partials/        Fragmentos reutilizables (formulario de la newsletter)
 static/                  Se copia tal cual a la raíz de la web:
   images/articles/         fotos y portadas de artículos   ← aquí subes imágenes
   images/og/               imágenes para compartir (portada y categorías)
@@ -69,7 +81,8 @@ static/                  Se copia tal cual a la raíz de la web:
   style.css                estilos de toda la web
   CNAME, ads.txt, robots.txt, BingSiteAuth.xml, pinterest-541f0.html,
   c997e84b….txt            dominio, AdSense y verificaciones: no los borres
-tools/build.py           Generador de la web
+static/js/solar-states.js  Datos por estado (precio, sol, crédito) que usan las calculadoras
+tools/build.py           Generador de la web (también crea solar-by-state.html)
 tools/pinterest/         Textos de los pines (pins_data.py) y scripts para crearlos
 tools/graphics/          Script de las portadas con datos (estados y comparativas)
 branding/                Material de marca que no se publica (foto de perfil)

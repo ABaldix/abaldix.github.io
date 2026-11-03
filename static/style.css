@@ -281,3 +281,82 @@ svg { display: block; width: 100%; height: 100%; }
 }
 
 .pillar-link { font-family: var(--sans); font-size: 1rem; background: var(--green-50); border-radius: 10px; padding: 14px 18px; }
+
+/* =========================================================
+   Tools, state hub, situations, newsletter (Nov 2026)
+   ========================================================= */
+.section-sub { color: var(--muted); margin: -6px 0 18px; font-size: .97rem; }
+
+/* What's your situation? */
+.situation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.situation { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; color: var(--ink); font-weight: 600; box-shadow: var(--shadow); transition: border-color .2s, transform .2s; }
+.situation span { color: var(--green); }
+.situation:hover { border-color: var(--green-600); transform: translateY(-1px); }
+
+/* Payback scale */
+.payback-scale { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.pb-col { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0 14px 16px; box-shadow: var(--shadow); overflow: hidden; }
+.pb-bar { height: 8px; margin: 0 -14px 12px; }
+.pb-1 .pb-bar, .pb-pill.pb-1 { background: #059669; }
+.pb-2 .pb-bar, .pb-pill.pb-2 { background: #65A30D; }
+.pb-3 .pb-bar, .pb-pill.pb-3 { background: #D97706; }
+.pb-4 .pb-bar, .pb-pill.pb-4 { background: #B45309; }
+.pb-label { font-weight: 700; color: var(--ink); margin: 0 0 10px; font-size: .95rem; }
+.pb-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.state-chip { display: inline-block; min-width: 40px; text-align: center; padding: 6px 8px; border-radius: 8px; background: var(--green-50); border: 1px solid var(--green-100); color: var(--green); font-weight: 700; font-size: .9rem; text-decoration: none; }
+.state-chip:hover { background: var(--green); color: #fff; }
+.pb-empty { color: var(--subtle); }
+.pb-pill { display: inline-block; color: #fff; font-weight: 700; font-size: .82rem; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.state-table td, .state-table th { vertical-align: middle; }
+.state-table caption a { color: inherit; }
+
+/* Calculators hub */
+.tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; margin-top: 36px; }
+.tool-card { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); text-decoration: none; color: var(--text); transition: transform .2s, box-shadow .2s; }
+.tool-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.tool-card h2 { font-size: 1.2rem; color: var(--ink); margin: 0; }
+.tool-card p { margin: 0; color: var(--muted); flex: 1; }
+.tool-card .read-more { color: var(--green); font-weight: 600; }
+.tool-tag { align-self: flex-start; background: var(--sun-50); color: #92400E; border: 1px solid #FDE68A; font-size: .75rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: .04em; }
+
+/* Battery calculator checkboxes */
+.calc-fieldset { border: 0; padding: 0; margin: 0 0 20px; }
+.calc-fieldset legend { font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+.check-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
+.check { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; cursor: pointer; font-size: .93rem; background: var(--bg); }
+.check input { accent-color: var(--green); width: 16px; height: 16px; }
+
+/* Recently updated + How we work */
+.home-split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
+.recent-box, .sources-box { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+.recent-list { list-style: none; margin: 0; padding: 0; }
+.recent-list li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.recent-list li:last-child { border-bottom: 0; }
+.recent-list a { color: var(--ink); text-decoration: none; font-weight: 500; }
+.recent-list a:hover { color: var(--green); }
+.recent-list span { color: var(--subtle); font-size: .85rem; white-space: nowrap; }
+.source-badges { list-style: none; padding: 0; margin: 12px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.source-badges li { background: var(--green-50); border: 1px solid var(--green-100); color: var(--green); border-radius: 999px; padding: 4px 12px; font-size: .85rem; font-weight: 600; }
+
+/* Newsletter (shown only when a MailerLite form is configured) */
+.newsletter { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: center; margin: 48px 0; padding: 32px; border-radius: var(--radius); background: linear-gradient(135deg, #064E3B, #047857); color: #ECFDF5; }
+.newsletter h2 { color: #fff; margin: 0 0 8px; font-size: 1.5rem; }
+.newsletter p { margin: 0; color: #D1FAE5; }
+.newsletter a { color: #fff; }
+.newsletter--compact { margin: 32px 0; padding: 24px; }
+
+@media (max-width: 860px) {
+    .payback-scale { grid-template-columns: repeat(2, 1fr); }
+    .home-split, .newsletter { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+    .payback-scale { grid-template-columns: 1fr; }
+    .recent-list li { flex-direction: column; gap: 2px; }
+}
+.tool-band a:not(.btn-cta-main) { color: #fff; }
+.state-table { width: 100%; border-collapse: collapse; font-size: .95rem; line-height: 1.5; background: var(--surface); }
+.state-table caption { caption-side: bottom; text-align: left; padding: 10px 14px; font-size: .82rem; color: var(--subtle); }
+.state-table th { background: #F9FAFB; text-align: left; font-weight: 700; color: var(--ink); padding: 12px 14px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.state-table td { padding: 11px 14px; border-bottom: 1px solid var(--line); }
+.state-table tr:last-child td { border-bottom: 0; }
+.state-table td a { text-decoration: none; font-weight: 600; }

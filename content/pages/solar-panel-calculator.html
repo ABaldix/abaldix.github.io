@@ -1,0 +1,111 @@
+---
+title: How Many Solar Panels Do I Need? Calculator (2026) | VivaVoltia
+description: Free solar panel calculator: enter your electricity use and state to see how many panels you need, system size in kW, roof space, and yearly production.
+---
+
+    <main class="container" style="padding: 60px 20px;">
+        <div class="text-center">
+            <h1 style="font-size: 2.5rem; color: #111827; margin-bottom: 15px;">How Many Solar Panels Do I Need?</h1>
+            <p style="font-size: 1.1rem; color: #4B5563; max-width: 680px; margin: 0 auto;">Enter your electricity use and where you live. We estimate the system size, number of panels, roof space, and how much power the system will make each year.</p>
+        </div>
+
+        <div class="calc-layout">
+            <form class="calc-card" id="calc" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="state">Your state</label>
+                    <select id="state"><option value="">Choose your state (optional)</option></select>
+                    <small>Fills in average sun hours. You can still edit them.</small>
+                </div>
+                <div class="form-group">
+                    <label for="kwh">Monthly electricity use (kWh)</label>
+                    <input type="number" id="kwh" min="100" max="5000" step="10" value="900" inputmode="decimal">
+                    <small>Find "kWh used" on your bill. The US average is about 860 kWh a month; averaging 12 months is best.</small>
+                </div>
+                <div class="form-group">
+                    <label for="sun">Peak sun hours per day</label>
+                    <input type="number" id="sun" min="2" max="7.5" step="0.1" value="4.5" inputmode="decimal">
+                </div>
+                <div class="form-group">
+                    <label for="watts">Panel size (watts)</label>
+                    <select id="watts">
+                        <option value="400">400 W</option>
+                        <option value="420" selected>420 W (typical in 2026)</option>
+                        <option value="440">440 W</option>
+                        <option value="470">470 W (premium)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="offset">Share of your use to cover (%)</label>
+                    <input type="number" id="offset" min="10" max="150" step="5" value="100" inputmode="decimal">
+                    <small>Where exports earn little (California, Arizona, Utah, Georgia), 60–80% often pays back faster.</small>
+                </div>
+                <div class="form-group">
+                    <label for="eff">System efficiency (%)</label>
+                    <input type="number" id="eff" min="60" max="95" step="1" value="80" inputmode="decimal">
+                    <small>Covers inverter, wiring, heat, dirt and minor shading losses. 80% is a sensible default; use 70% for partly shaded roofs.</small>
+                </div>
+            </form>
+
+            <section class="calc-card calc-results" aria-live="polite">
+                <h2>Your Estimate</h2>
+                <dl>
+                    <div><dt>Yearly use to cover</dt><dd id="r-use">–</dd></div>
+                    <div><dt>System size</dt><dd id="r-kw">–</dd></div>
+                    <div><dt>Number of panels</dt><dd id="r-n">–</dd></div>
+                    <div><dt>Roof space needed</dt><dd id="r-area">–</dd></div>
+                    <div><dt>Yearly production (first year)</dt><dd id="r-prod">–</dd></div>
+                    <div><dt>Approximate cost at $2.85/W</dt><dd id="r-cost">–</dd></div>
+                </dl>
+                <p class="calc-note">Roof space assumes about 21 sq ft per panel plus room for fire-code setbacks, so real layouts need roughly 25% more total roof area. Sun hours are rounded state averages from NREL data; your roof's direction, tilt, and shade change real output. For costs and payback, use our <a href="quote.html">solar payback calculator</a>.</p>
+            </section>
+        </div>
+
+        <section class="article-container" style="margin-top: 40px;">
+            <article class="article-content">
+                <h2>The Formula</h2>
+                <p>System size (kW) = yearly kWh to cover ÷ (peak sun hours × 365 × system efficiency). Number of panels = system size in watts ÷ panel wattage, rounded up. For example, 900 kWh a month in a 4.5-sun-hour state at 80% efficiency needs about 8.2 kW, or 20 panels of 420 W.</p>
+                <h2>Next Steps</h2>
+                <ul>
+                    <li>Read the full guide: <a href="articles/how-many-solar-panels-do-i-need.html">How Many Solar Panels Do I Need?</a></li>
+                    <li>Check whether your roof faces the right way: <a href="articles/solar-panel-orientation-and-tilt.html">Solar Panel Orientation and Tilt</a>.</li>
+                    <li>See your state's rules and payback: <a href="solar-by-state.html">Solar by State</a>.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script src="js/solar-states.js"></script>
+    <script>
+    (function () {
+        function el(id) { return document.getElementById(id); }
+        function num(id) { var v = parseFloat(el(id).value); return isNaN(v) ? 0 : v; }
+        var sel = el("state");
+        window.vvFillStates(sel);
+        sel.addEventListener("change", function () {
+            var st = window.VV_STATES[sel.value];
+            if (st) el("sun").value = st[2].toFixed(1);
+            calc();
+        });
+        function calc() {
+            var use = num("kwh") * 12 * num("offset") / 100, sun = num("sun"), eff = num("eff") / 100, w = num("watts");
+            var out = function (id, t) { el(id).textContent = t; };
+            if (use <= 0 || sun <= 0 || eff <= 0 || w <= 0) {
+                ["r-use", "r-kw", "r-n", "r-area", "r-prod", "r-cost"].forEach(function (i) { out(i, "–"); });
+                return;
+            }
+            var kw = use / (sun * 365 * eff);
+            var n = Math.ceil(kw * 1000 / w);
+            var real = n * w / 1000;
+            out("r-use", Math.round(use).toLocaleString("en-US") + " kWh");
+            out("r-kw", real.toFixed(1) + " kW");
+            out("r-n", n + " panels");
+            out("r-area", Math.round(n * 21).toLocaleString("en-US") + " sq ft of panels");
+            out("r-prod", Math.round(real * sun * 365 * eff).toLocaleString("en-US") + " kWh");
+            out("r-cost", "$" + (Math.round(real * 2850 / 100) * 100).toLocaleString("en-US"));
+        }
+        el("calc").addEventListener("input", calc);
+        el("calc").addEventListener("change", calc);
+        var q = (location.search.match(/[?&]state=([A-Za-z]{2})/) || [])[1];
+        if (q && window.VV_STATES[q.toUpperCase()]) { sel.value = q.toUpperCase(); el("sun").value = window.VV_STATES[sel.value][2].toFixed(1); }
+        calc();
+    })();
+    </script>
