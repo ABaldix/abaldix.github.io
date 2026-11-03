@@ -360,3 +360,14 @@ svg { display: block; width: 100%; height: 100%; }
 .state-table td { padding: 11px 14px; border-bottom: 1px solid var(--line); }
 .state-table tr:last-child td { border-bottom: 0; }
 .state-table td a { text-decoration: none; font-weight: 600; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.nl-row { display: flex; gap: 8px; }
+.nl-row input { flex: 1; min-width: 0; padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,.35); background: #fff; color: var(--ink); font-size: 1rem; }
+.nl-row input:focus { outline: 3px solid var(--sun); outline-offset: 1px; }
+.nl-row button { padding: 13px 20px; border: 0; border-radius: 10px; background: var(--sun); color: #1F2937; font-weight: 700; font-size: 1rem; cursor: pointer; white-space: nowrap; }
+.nl-row button:hover { background: #FBBF24; }
+.nl-row button:disabled { opacity: .7; cursor: wait; }
+.nl-msg { min-height: 1.4em; margin: 10px 0 0 !important; font-size: .92rem; }
+.nl-ok { color: #FDE68A !important; font-weight: 600; }
+.nl-err { color: #FECACA !important; }
+@media (max-width: 480px) { .nl-row { flex-direction: column; } }

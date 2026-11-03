@@ -352,6 +352,7 @@ def newsletter(prefix, compact=False):
     form = NEWSLETTER_FILE.read_text(encoding="utf-8").strip() if NEWSLETTER_FILE.exists() else ""
     if not form:
         return ""
+    form = form.replace("__ID__", "c" if compact else "m")
     cls = "newsletter newsletter--compact" if compact else "newsletter"
     return f"""
         <section class="{cls}" aria-labelledby="nl-title">
@@ -363,6 +364,7 @@ def newsletter(prefix, compact=False):
 {form}
             </div>
         </section>
+        <script src="{prefix}js/newsletter.js?v={asset_version("js/newsletter.js")}" defer></script>
 """
 
 
