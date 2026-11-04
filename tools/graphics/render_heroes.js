@@ -23,6 +23,10 @@ const STATES = [
   ['state-utah', 'Utah', '13.3¢', '5.5', 'Net billing (~4–6¢ exports)', 'Great sun, cheap power: size for self-use'],
   ['state-michigan', 'Michigan', '23.0¢', '3.9', 'Inflow/outflow billing', 'High prices offset modest sun'],
   ['state-connecticut', 'Connecticut', '24.5¢', '4.0', 'RRES Netting or Buy-All', 'Buy-All pays ~32.9¢ for 20 years'],
+  ['state-hawaii', 'Hawaii', '47.2¢', '5.6', 'Smart DER export credits', '35% state tax credit up to $5,000'],
+  ['state-ohio', 'Ohio', '19.4¢', '4.0', 'Monthly net metering', 'Regulators kept net metering in 2026'],
+  ['state-washington', 'Washington', '14.6¢', '3.6', '1:1 net metering', 'No sales tax on solar through 2029'],
+  ['state-oregon', 'Oregon', '15.9¢', '4.2', '1:1 net metering (PGE, Pacific)', 'Cash rebates still available'],
   ['state-virginia', 'Virginia', '17.6¢', '4.6', 'Annual net metering (NEM 2.0)', 'Regulators kept net metering in 2026'],
 ];
 const VS = [
