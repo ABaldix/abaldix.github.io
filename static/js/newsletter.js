@@ -29,21 +29,57 @@
         var sitekey = form.getAttribute("data-sitekey");
         var useCaptcha = !!(endpoint && sitekey && box);
         var widgetId = null;
+        var token = "";
+        var waiting = [];
         form.setAttribute("data-t", String(Date.now()));
 
         function say(text, cls) { msg.textContent = text; msg.className = "nl-msg" + (cls ? " " + cls : ""); }
+
+        function flush(value, err) {
+            var list = waiting; waiting = [];
+            list.forEach(function (w) { clearTimeout(w.timer); err ? w.reject(err) : w.resolve(value); });
+        }
 
         function ensureWidget() {
             if (!useCaptcha || widgetId !== null) return Promise.resolve();
             return loadTurnstile().then(function (ts) {
                 if (widgetId === null) {
-                    widgetId = ts.render(box, { sitekey: sitekey, size: "flexible", appearance: "interaction-only", action: "newsletter" });
+                    widgetId = ts.render(box, {
+                        sitekey: sitekey, size: "flexible", appearance: "interaction-only", action: "newsletter",
+                        callback: function (t) { token = t; flush(t); },
+                        "expired-callback": function () { token = ""; try { ts.reset(widgetId); } catch (e) {} },
+                        "error-callback": function () { token = ""; flush(null, new Error("captcha")); }
+                    });
                 }
             });
         }
-        // Load the captcha as soon as someone shows interest, not on every page view
+
+        // Resolve with a valid token, waiting for the (usually invisible) check to finish
+        function getToken() {
+            if (token) return Promise.resolve(token);
+            return ensureWidget().then(function () {
+                if (token) return token;
+                return new Promise(function (resolve, reject) {
+                    var w = { resolve: resolve, reject: reject };
+                    w.timer = setTimeout(function () {
+                        waiting = waiting.filter(function (x) { return x !== w; });
+                        reject(new Error("timeout"));
+                    }, 30000);
+                    waiting.push(w);
+                });
+            });
+        }
+
+        // Start the check early so it's ready by the time someone presses Subscribe
         if (useCaptcha) {
-            email.addEventListener("focus", function () { ensureWidget().catch(function () {}); }, { once: true });
+            var start = function () { ensureWidget().catch(function () {}); };
+            email.addEventListener("focus", start, { once: true });
+            if ("IntersectionObserver" in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    if (entries.some(function (en) { return en.isIntersecting; })) { io.disconnect(); start(); }
+                }, { rootMargin: "200px" });
+                io.observe(form);
+            }
         }
 
         form.addEventListener("submit", function (e) {
@@ -71,23 +107,25 @@
             say("Sending…");
 
             if (useCaptcha) {
-                ensureWidget().then(function () {
-                    var token = window.turnstile.getResponse(widgetId);
-                    if (!token) {
-                        btn.disabled = false;
-                        say("Please complete the quick check above, then press Subscribe again.", "nl-err");
-                        return;
-                    }
+                say("Checking you're human…");
+                getToken().then(function (t) {
+                    say("Sending…");
+                    token = ""; // a token can only be used once
                     return fetch(endpoint, {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ email: email.value.trim(), token: token })
+                        body: JSON.stringify({ email: email.value.trim(), token: t })
                     }).then(function (r) { return r.json(); }).then(function (d) {
                         if (d && d.success) done(true, "You're in! Check your inbox for our welcome email with the best guides to start.");
                         else if (d && d.error === "captcha") done(false, "We couldn't verify you're human. Please try again.");
                         else done(false, "Sorry, something went wrong. Please try again in a moment.");
                     });
-                }).catch(function () { done(false, "Sorry, something went wrong. Please try again in a moment."); });
+                }).catch(function (err) {
+                    var m = err && err.message;
+                    done(false, m === "timeout" || m === "captcha"
+                        ? "Please complete the quick check below, then press Subscribe again."
+                        : "Sorry, something went wrong. Please try again in a moment.");
+                });
                 return;
             }
 
