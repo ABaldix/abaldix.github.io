@@ -732,16 +732,32 @@ def render_index(arts):
     )
 
     groups = []
+    GROUP_MAX = 7
     for c in CAT_ORDER:
+        items = [a for a in arts if a["category"] == c and not a.get("state_code")]
+        total = sum(1 for a in arts if a["category"] == c)
         lis = "\n".join(
             f'                <li><a href="articles/{a["slug"]}.html">{esc(a["title"])}</a></li>'
-            for a in arts if a["category"] == c
+            for a in items[:GROUP_MAX]
         )
         groups.append(f"""            <div class="guides-group">
                 <h3><a href="guides/{CATEGORIES[c]['slug']}.html">{CATEGORIES[c]['name']}</a></h3>
                 <ul>
 {lis}
                 </ul>
+                <a class="guides-more" href="guides/{CATEGORIES[c]['slug']}.html">See all {total} guides →</a>
+            </div>""")
+    state_arts = {a["state_code"]: a for a in arts if a.get("state_code")}
+    TOP_STATES = ["CA", "TX", "FL", "AZ", "NY", "NJ", "NC"]
+    lis = "\n".join(
+        f'                <li><a href="articles/{state_arts[sc]["slug"]}.html">Is Solar Worth It in {esc(state_arts[sc]["title"].split(" in ", 1)[1].split(" in 20")[0])}?</a></li>'
+        for sc in TOP_STATES if sc in state_arts)
+    groups.append(f"""            <div class="guides-group">
+                <h3><a href="solar-by-state.html">State Guides</a></h3>
+                <ul>
+{lis}
+                </ul>
+                <a class="guides-more" href="solar-by-state.html">See all {len(state_arts)} states →</a>
             </div>""")
 
     rows = state_rows(arts)
