@@ -26,6 +26,10 @@ const STATES = [
   ['state-hawaii', 'Hawaii', '47.2¢', '5.6', 'Smart DER export credits', '35% state tax credit up to $5,000'],
   ['state-ohio', 'Ohio', '19.4¢', '4.0', 'Monthly net metering', 'Regulators kept net metering in 2026'],
   ['state-washington', 'Washington', '14.6¢', '3.6', '1:1 net metering', 'No sales tax on solar through 2029'],
+  ['state-minnesota', 'Minnesota', '17.2¢', '4.3', 'Retail-rate net metering', 'Every utility must offer it'],
+  ['state-new-mexico', 'New Mexico', '16.5¢', '6.2', 'Net metering (PNM, EPE, Xcel)', '10% state tax credit up to $6,000'],
+  ['state-wisconsin', 'Wisconsin', '19.4¢', '4.1', 'Monthly net metering', 'Focus on Energy rebate up to $2,400'],
+  ['state-missouri', 'Missouri', '16.0¢', '4.6', 'Monthly net metering', 'Evergy vs Ameren credits differ'],
   ['state-oregon', 'Oregon', '15.9¢', '4.2', '1:1 net metering (PGE, Pacific)', 'Cash rebates still available'],
   ['state-virginia', 'Virginia', '17.6¢', '4.6', 'Annual net metering (NEM 2.0)', 'Regulators kept net metering in 2026'],
 ];

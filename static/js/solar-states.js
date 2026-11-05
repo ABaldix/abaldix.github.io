@@ -26,7 +26,7 @@ window.VV_STATES = {
             MI: ["Michigan", 0.230, 3.9, 0.5],
             MN: ["Minnesota", 0.172, 4.3, 1],
             MS: ["Mississippi", 0.144, 4.8, 0.5],
-            MO: ["Missouri", 0.160, 4.6, 1],
+            MO: ["Missouri", 0.160, 4.6, 0.6],
             MT: ["Montana", 0.156, 4.4, 1],
             NE: ["Nebraska", 0.135, 4.8, 1],
             NV: ["Nevada", 0.127, 6.1, 0.75],
@@ -54,7 +54,7 @@ window.VV_STATES = {
             WY: ["Wyoming", 0.144, 5.0, 0.75]
 };
 // States with a full "Is solar worth it" guide (slug under /articles/)
-window.VV_GUIDES = {CA: "is-solar-worth-it-california", TX: "is-solar-worth-it-texas", FL: "is-solar-worth-it-florida", AZ: "is-solar-worth-it-arizona", NY: "is-solar-worth-it-new-york", NJ: "is-solar-worth-it-new-jersey", MA: "is-solar-worth-it-massachusetts", NC: "is-solar-worth-it-north-carolina", CO: "is-solar-worth-it-colorado", IL: "is-solar-worth-it-illinois", NV: "is-solar-worth-it-nevada", GA: "is-solar-worth-it-georgia", PA: "is-solar-worth-it-pennsylvania", VA: "is-solar-worth-it-virginia", MD: "is-solar-worth-it-maryland", SC: "is-solar-worth-it-south-carolina", UT: "is-solar-worth-it-utah", MI: "is-solar-worth-it-michigan", CT: "is-solar-worth-it-connecticut", HI: "is-solar-worth-it-hawaii", OH: "is-solar-worth-it-ohio", WA: "is-solar-worth-it-washington", OR: "is-solar-worth-it-oregon"};
+window.VV_GUIDES = {CA: "is-solar-worth-it-california", TX: "is-solar-worth-it-texas", FL: "is-solar-worth-it-florida", AZ: "is-solar-worth-it-arizona", NY: "is-solar-worth-it-new-york", NJ: "is-solar-worth-it-new-jersey", MA: "is-solar-worth-it-massachusetts", NC: "is-solar-worth-it-north-carolina", CO: "is-solar-worth-it-colorado", IL: "is-solar-worth-it-illinois", NV: "is-solar-worth-it-nevada", GA: "is-solar-worth-it-georgia", PA: "is-solar-worth-it-pennsylvania", VA: "is-solar-worth-it-virginia", MD: "is-solar-worth-it-maryland", SC: "is-solar-worth-it-south-carolina", UT: "is-solar-worth-it-utah", MI: "is-solar-worth-it-michigan", CT: "is-solar-worth-it-connecticut", HI: "is-solar-worth-it-hawaii", OH: "is-solar-worth-it-ohio", WA: "is-solar-worth-it-washington", OR: "is-solar-worth-it-oregon", MN: "is-solar-worth-it-minnesota", NM: "is-solar-worth-it-new-mexico", WI: "is-solar-worth-it-wisconsin", MO: "is-solar-worth-it-missouri"};
 // Fill a <select> with all states, sorted by name
 window.vvFillStates = function (sel) {
     var S = window.VV_STATES;
