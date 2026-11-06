@@ -12,6 +12,7 @@ spec = importlib.util.spec_from_file_location("b", ROOT / "tools" / "build.py")
 b = importlib.util.module_from_spec(spec); spec.loader.exec_module(b)
 sys.path.insert(0, str(ROOT / "tools" / "pinterest"))
 from pins_data import PINS
+from pins_c import PINS_C
 
 GRAD = {"panels": "#ECFDF5,#FEF3C7", "batteries": "#D1FAE5,#ECFEFF", "inverters": "#F0FDF4,#E0F2FE",
         "costs": "#FFFBEB,#ECFDF5", "installation": "#F5F5F4,#ECFDF5"}
@@ -54,6 +55,22 @@ for a in arts:
   <div class="bcta">Free 2026 guide at <b>vivavoltia.com</b></div>
 </div>''')
     keys += [f"{a['slug']}-a", f"{a['slug']}-b"]
+    if a["slug"] in PINS_C:
+        hC, sC, _ = PINS_C[a["slug"]]
+        if a.get("image") and not a["image"].startswith(("state-", "vs-")):
+            cmedia = f'<div class="cmedia" style="background-image:url(\'file://{ROOT}/static/images/{b.img_rel(a["image"])}\')"></div>'
+        else:
+            cmedia = f'<div class="cmedia cicon" style="background:linear-gradient(135deg,{GRAD[a["category"]]})"><div class="cbigicon">{ic}</div></div>'
+        blocks.append(f'''
+<div class="pin pinC" id="{a["slug"]}-c">
+  <div class="ctop"><span class="ctag" style="background:{DARK[a["category"]]}">{e(cat["name"])}</span><span class="cyear">2026 guide</span></div>
+  <h1>{e(hC)}</h1>
+  <div class="cline"></div>
+  <p>{e(sC)}</p>
+  {cmedia}
+  <div class="cfoot"><span class="logo" style="color:#065F46">VivaVoltia</span><span>Read free at <b>vivavoltia.com</b></span></div>
+</div>''')
+        keys.append(f"{a['slug']}-c")
 
 css = """
 body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif}
@@ -79,6 +96,18 @@ body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-s
 .bcta{font-size:38px;color:#D1FAE5;border-top:3px solid rgba(255,255,255,.25);padding-top:36px}
 .bcta b{color:#fff}
 svg{width:100%;height:100%;display:block}
+.pinC{background:#FFF8EC;display:flex;flex-direction:column;padding:70px 70px 56px}
+.ctop{display:flex;justify-content:space-between;align-items:center}
+.ctag{color:#fff;border-radius:14px;padding:14px 26px;font-size:28px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.cyear{font-size:30px;font-weight:700;color:#92400E}
+.pinC h1{font-size:104px;line-height:1.02;letter-spacing:-3px;color:#0F172A;margin:56px 0 0;font-weight:900}
+.cline{width:160px;height:14px;background:#F59E0B;border-radius:8px;margin:40px 0 34px}
+.pinC p{font-size:46px;line-height:1.25;color:#374151;margin:0 0 50px;font-weight:600}
+.cmedia{flex:1;border-radius:36px;background-size:cover;background-position:center;box-shadow:0 24px 50px rgba(15,23,42,.12);min-height:300px}
+.cicon{display:flex;align-items:center;justify-content:center}
+.cbigicon{width:300px;height:300px;background:#fff;border-radius:50px;padding:46px;box-sizing:border-box;box-shadow:0 20px 40px rgba(0,0,0,.10)}
+.cfoot{display:flex;justify-content:space-between;align-items:center;margin-top:44px;font-size:32px;color:#374151}
+.cfoot b{color:#065F46}
 """
 pathlib.Path("/tmp/pins.html").write_text(f"<html><head><meta charset='utf-8'><style>{css}</style></head><body>{''.join(blocks)}</body></html>")
 pathlib.Path("/tmp/pins.json").write_text(json.dumps({"keys": keys, "out": str(ROOT / "static" / "images" / "pins")}))
