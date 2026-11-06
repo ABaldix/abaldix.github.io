@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "nem-3-california-net-billing",
+ "scenes": [
+  {
+   "lines": [
+    "Your neighbor got solar",
+    "*before April 2023.*"
+   ],
+   "say": "Picture this. Your neighbor in California got solar before April twenty twenty-three.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "You got it *after.*"
+   ],
+   "say": "You got it after.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Same panels.",
+    "*Very different* bill credits."
+   ],
+   "say": "Same panels. Very different bill credits.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "That's *NEM 3.0.*",
+    "~The Net Billing Tariff"
+   ],
+   "say": "That's NEM three, the net billing tariff, for new PG and E, SCE, and SDG and E customers.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Exports earn *avoided cost* —",
+    "far below retail."
+   ],
+   "say": "Exports now earn time-varying avoided-cost credits, usually far below retail.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "The fix: a *battery* that stores",
+    "midday solar for the evening."
+   ],
+   "say": "What makes the numbers work? A battery that stores midday solar for evening use.",
+   "bg": "battery-wall.jpg"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "NEM 3.0 in plain English",
+    "~What changed + how to design for it"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "On NEM three? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

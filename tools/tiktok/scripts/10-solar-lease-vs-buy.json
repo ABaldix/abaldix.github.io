@@ -1,0 +1,69 @@
+{
+ "assets": "../assets",
+ "article": "solar-lease-vs-buy",
+ "scenes": [
+  {
+   "lines": [
+    "*$0 down* solar.",
+    "Sounds amazing."
+   ],
+   "say": "Picture this. A company offers you solar for zero dollars down. Sounds amazing.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "But it's a *lease.*"
+   ],
+   "say": "But it's a lease.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Is that a *good deal?*"
+   ],
+   "say": "Is that actually a good deal?",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Buying with cash usually means",
+    "the *biggest lifetime savings.*"
+   ],
+   "say": "Buying with cash usually delivers the highest lifetime savings.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "But in 2026, leasing companies",
+    "still get a *federal credit.*",
+    "~Homeowners don't."
+   ],
+   "say": "But in twenty twenty-six, leasing companies can still claim a federal business credit that homeowners can't. That's made leases more competitive.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "type": "list",
+   "kicker": "Before you sign, check:",
+   "items": [
+    "The yearly *price escalator*",
+    "The *buyout* terms",
+    "What happens if you *sell*"
+   ],
+   "say": "Before you sign a lease, check the yearly price escalator, the buyout terms, and what happens when you sell your home.",
+   "itemStart": 1.6,
+   "itemStep": 2.2,
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Lease, loan or cash?",
+    "~Which is the better deal in 2026"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Trying to decide how to pay? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

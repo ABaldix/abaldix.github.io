@@ -1,0 +1,65 @@
+{
+ "assets": "../assets",
+ "article": "is-solar-worth-it-north-carolina",
+ "scenes": [
+  {
+   "lines": [
+    "Duke Energy changed its",
+    "*solar rules.*"
+   ],
+   "say": "If you live in North Carolina, Duke Energy changed its solar rules.",
+   "kicker": "Heads up, North Carolina",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "New customers pick between",
+    "*two rates.*"
+   ],
+   "say": "New Duke customers choose between two rates.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "The *Bridge Rate* —",
+    "open until 2027."
+   ],
+   "say": "The Net Metering Bridge Rate, open until twenty twenty-seven.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Or *Residential Solar Choice* —",
+    "a time-of-use rate."
+   ],
+   "say": "Or Residential Solar Choice, a time-of-use rate.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "PowerPair: up to *$9,000*",
+    "for solar + battery."
+   ],
+   "say": "And Duke's PowerPair program offers up to nine thousand dollars for new solar plus battery systems, while capacity lasts.",
+   "bg": "battery-wall.jpg"
+  },
+  {
+   "lines": [
+    "Solar-only payback:",
+    "*12 to 14 years.*"
+   ],
+   "say": "A solar-only system typically pays back in about twelve to fourteen years.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Which Duke rate fits you?",
+    "~PowerPair + payback math"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Going solar in North Carolina? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

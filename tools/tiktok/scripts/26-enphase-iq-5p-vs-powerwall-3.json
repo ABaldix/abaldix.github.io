@@ -1,0 +1,65 @@
+{
+ "assets": "../assets",
+ "article": "enphase-iq-5p-vs-powerwall-3",
+ "scenes": [
+  {
+   "lines": [
+    "*Enphase* or *Tesla?*",
+    "Which home battery wins?"
+   ],
+   "say": "Enphase or Tesla. Which home battery should you get?",
+   "kicker": "Battery battle",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "*Powerwall 3:* one big",
+    "13.5 kWh battery."
+   ],
+   "say": "One Powerwall three stores thirteen point five kilowatt-hours and delivers eleven point five kilowatts.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "*Enphase 5P:* 5 kWh blocks",
+    "you can stack."
+   ],
+   "say": "One Enphase IQ Battery five P stores five kilowatt-hours. You stack them.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Three 5Ps ≈ one Powerwall,",
+    "usually for *more money.*"
+   ],
+   "say": "Three five Ps roughly match one Powerwall, usually at a higher total price.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Enphase wins on *warranty:*",
+    "*15 years* vs 10."
+   ],
+   "say": "Enphase wins on warranty: fifteen years versus ten, and fits Enphase systems perfectly.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Powerwall wins for *new* systems.",
+    "~Built-in solar inverter"
+   ],
+   "say": "Powerwall three is usually the better value for new solar plus storage, because its inverter is built in.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Which fits *your* home?",
+    "~Enphase vs Powerwall, compared"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Choosing a battery? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

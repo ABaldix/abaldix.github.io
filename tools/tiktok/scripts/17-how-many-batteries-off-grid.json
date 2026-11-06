@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "how-many-batteries-off-grid",
+ "scenes": [
+  {
+   "lines": [
+    "You want to *go off-grid.*",
+    "No more power bills."
+   ],
+   "say": "Imagine this. You want to go completely off-grid. No more power bills.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "How many batteries",
+    "does that *really* take?"
+   ],
+   "say": "How many batteries does that really take?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Average home:",
+    "*30 kWh a day.*"
+   ],
+   "say": "The average US home uses about thirty kilowatt-hours a day.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "For 2–3 cloudy days you'd need",
+    "*60–90+ kWh* of storage."
+   ],
+   "say": "To get through two or three cloudy days, you'd need roughly sixty to ninety kilowatt-hours of storage, or more.",
+   "bg": "battery-wall.jpg"
+  },
+  {
+   "lines": [
+    "That's *very expensive.*"
+   ],
+   "say": "That's very expensive.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Most off-grid homes *cut usage*",
+    "and add a *generator.*"
+   ],
+   "say": "Most off-grid homes cut their usage sharply and add a backup generator instead.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Off-grid or backup?",
+    "~Battery sizing made simple"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Dreaming of going off-grid? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

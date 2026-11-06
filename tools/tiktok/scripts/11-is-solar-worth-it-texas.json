@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "is-solar-worth-it-texas",
+ "scenes": [
+  {
+   "lines": [
+    "Texas has *huge sun.*"
+   ],
+   "say": "Imagine this. You live in Texas, with some of the best sun in the country.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "But there's *no statewide*",
+    "net metering."
+   ],
+   "say": "But there's no statewide net metering.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Your *electricity plan* decides",
+    "what your solar is worth."
+   ],
+   "say": "In most of Texas, your retail electricity plan's solar buyback rate decides what your exported power is worth.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Good buyback plan:",
+    "*about 10 years* payback."
+   ],
+   "say": "With a plan that credits exports near retail, a typical system pays back in about ten years.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Low buyback rate:",
+    "*15+ years.*"
+   ],
+   "say": "With a low buyback rate, it can take fifteen years or more.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Plus a *100% property tax*",
+    "exemption on solar."
+   ],
+   "say": "The good news: there's a one hundred percent property tax exemption on solar, statewide.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Which plan fits *your* solar?",
+    "~Texas buyback plans explained"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Going solar in Texas? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "assets": "../assets",
+ "article": "solar-panels-hail-insurance",
+ "scenes": [
+  {
+   "lines": [
+    "A *hailstorm* hits",
+    "your neighborhood."
+   ],
+   "say": "Picture this. A hailstorm hits your neighborhood.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "What happens to your",
+    "*solar panels?*"
+   ],
+   "say": "What happens to your solar panels?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Panels are tested with *1-inch*",
+    "hail at about *51 mph.*"
+   ],
+   "say": "Panels are tested with one-inch ice balls fired at about fifty-one miles per hour.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Many are rated for *bigger* hail.",
+    "~35–55 mm"
+   ],
+   "say": "Many are tested to even larger hail. Look for enhanced ratings in hail-prone states.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Usually covered by",
+    "*homeowners insurance.*"
+   ],
+   "say": "Rooftop solar is usually covered by homeowners insurance, but confirm your limits.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "After a storm: check *production*,",
+    "inspect from the *ground.*"
+   ],
+   "say": "After a storm, check your production and inspect from the ground. Don't climb on the roof.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Solar vs hail",
+    "~Ratings, risks and insurance"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Live in hail country? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

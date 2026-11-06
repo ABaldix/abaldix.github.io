@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "is-solar-worth-it-florida",
+ "scenes": [
+  {
+   "lines": [
+    "The *Sunshine State.*"
+   ],
+   "say": "Imagine this. You live in the Sunshine State.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Is solar actually",
+    "*worth it* in Florida?"
+   ],
+   "say": "But is solar actually worth it in Florida?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "FPL, Duke and TECO still credit",
+    "solar at the *full retail rate.*"
+   ],
+   "say": "Here's the good news. FPL, Duke Energy Florida, and TECO still credit exported solar at the full retail rate.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "*No sales tax* on solar.",
+    "*No property tax* on the added value."
+   ],
+   "say": "Solar is exempt from the six percent sales tax, and the added home value is exempt from property tax.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Typical payback:",
+    "*10 to 12 years.*"
+   ],
+   "say": "At Florida's average price, a typical system pays back in roughly ten to twelve years.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Hurricanes? Plan your *roof*,",
+    "*racking* and *backup.*"
+   ],
+   "say": "Just plan for hurricanes: a solid roof, wind-rated racking, and a backup plan.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Florida solar in 2026",
+    "~Payback math + hurricane tips"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Going solar in Florida? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

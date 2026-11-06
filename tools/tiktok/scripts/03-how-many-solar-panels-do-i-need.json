@@ -1,0 +1,62 @@
+{
+ "assets": "../assets",
+ "article": "how-many-solar-panels-do-i-need",
+ "scenes": [
+  {
+   "lines": [
+    "Two installers.",
+    "*Two very different* panel counts."
+   ],
+   "say": "Imagine this. Two installers quote your house, with two very different panel counts.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Who's right?"
+   ],
+   "say": "So who's right?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Your *electric bill* already knows."
+   ],
+   "say": "The answer is already on your electric bill.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Average US home:",
+    "*10,800 kWh* a year."
+   ],
+   "say": "The average US home uses about ten thousand eight hundred kilowatt-hours a year.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "That's about *17–25 panels.*",
+    "~400–450 W each"
+   ],
+   "say": "That works out to roughly seventeen to twenty-five panels of four hundred to four hundred fifty watts.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Sunshine changes it by *30%+*"
+   ],
+   "say": "But your local sunshine changes the answer by thirty percent or more. The same home needs fewer panels in Arizona than in Washington.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "How many do *you* need?",
+    "~Our simple 4-step sizing guide"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Want to size your own system? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

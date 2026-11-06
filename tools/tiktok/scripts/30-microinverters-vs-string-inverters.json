@@ -1,0 +1,63 @@
+{
+ "assets": "../assets",
+ "article": "microinverters-vs-string-inverters",
+ "scenes": [
+  {
+   "lines": [
+    "Your installer asks:",
+    "*micro or string inverter?*"
+   ],
+   "say": "Picture this. Your installer asks: microinverters or a string inverter?",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "You have *no idea.*"
+   ],
+   "say": "And you have no idea.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "*String inverters:* the cheapest.",
+    "~Great for simple, sunny roofs"
+   ],
+   "say": "String inverters are the cheapest option, and work well on simple, unshaded roofs.",
+   "bg": "inverter.jpg"
+  },
+  {
+   "lines": [
+    "*Microinverters:* one per panel.",
+    "~Less shade loss + panel monitoring"
+   ],
+   "say": "Microinverters convert power at each panel. Less shade loss, and panel-level monitoring, at a higher price.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "*Optimizers:* the middle ground."
+   ],
+   "say": "Power optimizers with a string inverter are a middle ground.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Shady roof?",
+    "Go *panel-level.*"
+   ],
+   "say": "If your roof has shade, panel-level electronics are usually worth it.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Which inverter is right?",
+    "~Micro vs string vs optimizers"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Choosing an inverter? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "assets": "../assets",
+ "article": "hybrid-vs-grid-tie-inverter",
+ "scenes": [
+  {
+   "lines": [
+    "You might want a *battery*",
+    "in a few years."
+   ],
+   "say": "Imagine this. You're getting solar now, and you might want a battery in a few years.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Your inverter choice",
+    "*today* matters."
+   ],
+   "say": "Your inverter choice today really matters.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "*Grid-tie:* converts solar,",
+    "shuts off in outages."
+   ],
+   "say": "A grid-tie inverter converts solar power, but shuts down in outages and can't manage a battery.",
+   "bg": "inverter.jpg"
+  },
+  {
+   "lines": [
+    "*Hybrid:* handles solar",
+    "*and* a battery."
+   ],
+   "say": "A hybrid inverter handles both solar and a battery, and can provide backup.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Battery coming later?",
+    "Go *hybrid* or *battery-ready.*"
+   ],
+   "say": "If a battery might come later, a hybrid inverter or battery-ready design can save money.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Already have solar?",
+    "*AC-coupled* batteries add on easily."
+   ],
+   "say": "Already have solar? AC-coupled batteries are the easiest to add.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Hybrid or grid-tie?",
+    "~Choose right the first time"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Choosing an inverter? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

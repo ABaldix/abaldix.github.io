@@ -1,0 +1,63 @@
+{
+ "assets": "../assets",
+ "article": "solar-with-or-without-battery",
+ "scenes": [
+  {
+   "lines": [
+    "Your solar quote has",
+    "a *$12,000 battery* on it."
+   ],
+   "say": "Picture this. Your solar quote includes a twelve thousand dollar battery.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Do you *really* need it?"
+   ],
+   "say": "Do you really need it?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "With *full net metering*:",
+    "usually skip it."
+   ],
+   "say": "If your utility has full retail net metering, solar without a battery usually pays back fastest.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "With *net billing* or *time-of-use*:",
+    "a battery can save a lot."
+   ],
+   "say": "Under net billing or time-of-use rates, a battery can add real savings by shifting solar to the evening.",
+   "bg": "battery-wall.jpg"
+  },
+  {
+   "lines": [
+    "Frequent *outages?*",
+    "Backup alone can justify it."
+   ],
+   "say": "And if outages are frequent or costly for you, backup value alone can justify one.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Not sure? Go *battery-ready.*"
+   ],
+   "say": "Not sure yet? Choose battery-ready equipment and add storage later.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Battery or no battery?",
+    "~4 questions that decide it"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Still deciding? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

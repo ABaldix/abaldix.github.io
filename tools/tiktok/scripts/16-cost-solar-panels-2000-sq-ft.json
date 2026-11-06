@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "cost-solar-panels-2000-sq-ft",
+ "scenes": [
+  {
+   "lines": [
+    "A *2,000 sq ft* home.",
+    "How much is solar?"
+   ],
+   "say": "Picture a typical two thousand square foot home. How much does solar cost?",
+   "kicker": "Picture this…",
+   "bg": "house-cost.jpg"
+  },
+  {
+   "lines": [
+    "Most need *7–9 kW.*",
+    "~About 17–22 panels"
+   ],
+   "say": "Most homes that size need seven to nine kilowatts of solar, or about seventeen to twenty-two panels.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "At *$2.60–$3.00* per watt…"
+   ],
+   "say": "At two sixty to three dollars per watt…",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "…that's *$19,000–$25,000.*",
+    "~before incentives"
+   ],
+   "say": "That's roughly nineteen to twenty-five thousand dollars before incentives.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "*No federal credit* in 2026.",
+    "~State incentives still help"
+   ],
+   "say": "There's no federal credit for homeowner purchases in twenty twenty-six, but state incentives can still cut the cost.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Typical payback:",
+    "*9 to 13 years.*"
+   ],
+   "say": "Typical payback is nine to thirteen years, faster where electricity is expensive.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "What would *your* home cost?",
+    "~Full 2026 cost breakdown"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Want the full breakdown? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

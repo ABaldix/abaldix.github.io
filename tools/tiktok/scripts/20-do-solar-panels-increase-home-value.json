@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "do-solar-panels-increase-home-value",
+ "scenes": [
+  {
+   "lines": [
+    "You're *selling* your home.",
+    "It has solar panels."
+   ],
+   "say": "Imagine this. You're selling your home, and it has solar panels.",
+   "kicker": "Imagine this…",
+   "bg": "house-cost.jpg"
+  },
+  {
+   "lines": [
+    "Do buyers *pay more?*"
+   ],
+   "say": "Do buyers actually pay more?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Zillow found solar homes sold for",
+    "about *4.1% more.*"
+   ],
+   "say": "A twenty nineteen Zillow analysis found homes with solar sold for about four point one percent more.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Berkeley Lab: about *$4 per watt*",
+    "of owned solar."
+   ],
+   "say": "Berkeley Lab research found buyers paid roughly four dollars per watt of owned solar.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "But *owned* systems add value.",
+    "*Leased* ones can complicate a sale."
+   ],
+   "say": "But that's for owned systems. Leased systems can complicate a sale.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Keep your *records* ready.",
+    "~Production, warranties, permits"
+   ],
+   "say": "Tip: keep production records, warranties, and permits ready for appraisers and buyers.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "How much could *yours* add?",
+    "~What the research says"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Thinking about resale value? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

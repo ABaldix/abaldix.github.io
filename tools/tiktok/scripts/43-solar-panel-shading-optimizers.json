@@ -1,0 +1,55 @@
+{
+ "assets": "../assets",
+ "article": "solar-panel-shading-optimizers",
+ "scenes": [
+  {
+   "lines": [
+    "One tree shades *one panel.*"
+   ],
+   "say": "Picture this. One tree shades just one of your solar panels.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Your *whole system* drops."
+   ],
+   "say": "And your whole system's output drops.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "In a simple string, one shaded",
+    "panel drags down the *rest.*"
+   ],
+   "say": "In a simple string, shade on one panel can reduce the output of the whole string.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "*Optimizers* or *microinverters*",
+    "fix most of that."
+   ],
+   "say": "Optimizers or microinverters usually recover a big share of those shade losses.",
+   "bg": "inverter.jpg"
+  },
+  {
+   "lines": [
+    "Heavy, all-day shade?",
+    "*Trim trees* instead."
+   ],
+   "say": "But heavy, all-day shade can't be fixed with electronics. Trimming trees or using another roof face matters more.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Shade on your roof?",
+    "~How to protect your output"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Got a shady roof? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

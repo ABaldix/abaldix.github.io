@@ -1,0 +1,65 @@
+{
+ "assets": "../assets",
+ "article": "solar-installation-process-timeline",
+ "scenes": [
+  {
+   "lines": [
+    "You *signed* the solar contract.",
+    "Now what?"
+   ],
+   "say": "Imagine you just signed your solar contract. Now what?",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "When will your panels",
+    "*actually turn on?*"
+   ],
+   "say": "When will your panels actually turn on?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Most projects take",
+    "*1–3 months.*"
+   ],
+   "say": "Most projects take about one to three months from contract to switch-on.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "The rooftop work?",
+    "Only *1–3 days.*"
+   ],
+   "say": "The rooftop work itself usually takes just one to three days.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "*Permits*, *inspections* and",
+    "*utility approval* cause the wait."
+   ],
+   "say": "Permits, inspections, and utility approval cause most of the wait.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Don't switch on before",
+    "*permission to operate.*"
+   ],
+   "say": "And don't turn the system on until the utility grants permission to operate. Tie your final payment to that too.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "From contract to switch-on",
+    "~Every step, explained"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Getting solar installed soon? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

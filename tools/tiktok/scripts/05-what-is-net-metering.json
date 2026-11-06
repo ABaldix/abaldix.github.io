@@ -1,0 +1,63 @@
+{
+ "assets": "../assets",
+ "article": "what-is-net-metering",
+ "scenes": [
+  {
+   "lines": [
+    "Your solar panels make",
+    "*more power* than you use."
+   ],
+   "say": "Picture a sunny afternoon. Your solar panels make more power than your home is using.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Where does the *extra* go?"
+   ],
+   "say": "So where does the extra go?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "It flows *back to the grid.*"
+   ],
+   "say": "It flows back to the grid.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "With *net metering*, you get",
+    "a credit for every kWh."
+   ],
+   "say": "With net metering, you get a bill credit for every kilowatt-hour, at or near the retail rate.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "The grid works like",
+    "a *free battery.*"
+   ],
+   "say": "It's like using the grid as a free battery.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "But many states now use",
+    "*net billing* — and pay less."
+   ],
+   "say": "But a growing number of states use net billing, which pays much less for exports. That's why self-use and batteries matter more now.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "What does *your* state do?",
+    "~Net metering explained simply"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Want to know how your state credits solar? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

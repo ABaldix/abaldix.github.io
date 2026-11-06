@@ -1,0 +1,70 @@
+{
+ "assets": "../assets",
+ "article": "is-solar-worth-it-arizona",
+ "scenes": [
+  {
+   "lines": [
+    "Arizona has the",
+    "*best sun* in the US."
+   ],
+   "say": "Imagine this. Arizona has the strongest sun in the country.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "So solar pays back *super fast*…",
+    "~right?"
+   ],
+   "say": "So solar must pay back super fast, right?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Not quite. APS and TEP pay about",
+    "*6¢* for exported solar."
+   ],
+   "say": "Not quite. APS and TEP pay only about six cents per kilowatt-hour for the solar you export.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Typical payback:",
+    "*12 to 14 years.*"
+   ],
+   "say": "So a typical system pays back in about twelve to fourteen years.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "type": "list",
+   "kicker": "Make it pay faster:",
+   "items": [
+    "Use more solar *at home*",
+    "*West-facing* panels",
+    "*Size* it right"
+   ],
+   "say": "To make it pay faster: use more of your solar at home, consider west-facing panels, and size the system carefully.",
+   "itemStart": 1.6,
+   "itemStep": 2.2,
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Plus a *state credit*",
+    "of 25% up to *$1,000.*"
+   ],
+   "say": "And the state credit, twenty-five percent up to a thousand dollars, still applies.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Arizona solar, sized right",
+    "~2026 payback under net billing"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Going solar in Arizona? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

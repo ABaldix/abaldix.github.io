@@ -1,0 +1,65 @@
+{
+ "assets": "../assets",
+ "article": "powerwall-3-vs-franklinwh-apower-2",
+ "scenes": [
+  {
+   "lines": [
+    "*Tesla* or *FranklinWH?*",
+    "Whole-home battery showdown."
+   ],
+   "say": "Tesla Powerwall three or FranklinWH aPower two? Let's settle it.",
+   "kicker": "Battery battle",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "*Storage:* FranklinWH wins.",
+    "~15 kWh vs 13.5 kWh"
+   ],
+   "say": "Storage: FranklinWH wins, fifteen kilowatt-hours versus thirteen point five.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "*Power:* Powerwall wins.",
+    "~11.5 kW vs 10 kW"
+   ],
+   "say": "Continuous power: Powerwall wins, eleven point five kilowatts versus ten.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "*Warranty:* FranklinWH.",
+    "~15 years vs 10"
+   ],
+   "say": "Warranty: FranklinWH, fifteen years versus ten, plus built-in generator integration.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "*New solar?* Powerwall is",
+    "usually cheaper."
+   ],
+   "say": "Getting new solar? Powerwall three is usually cheaper, because the inverter is built in.",
+   "bg": "battery-wall.jpg"
+  },
+  {
+   "lines": [
+    "*Existing solar?* FranklinWH",
+    "adds on easily."
+   ],
+   "say": "Already have solar? FranklinWH is a strong choice for adding storage.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Which battery wins for you?",
+    "~Powerwall 3 vs FranklinWH"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Choosing a whole-home battery? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

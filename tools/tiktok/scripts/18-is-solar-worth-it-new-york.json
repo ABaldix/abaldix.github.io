@@ -1,0 +1,65 @@
+{
+ "assets": "../assets",
+ "article": "is-solar-worth-it-new-york",
+ "scenes": [
+  {
+   "lines": [
+    "New York isn't known",
+    "for *sunshine.*"
+   ],
+   "say": "Picture this. You live in New York. Not exactly famous for sunshine.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "But solar pays back",
+    "*faster* than in many sunny states."
+   ],
+   "say": "But solar here pays back faster than in many sunny states.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Why? Power costs",
+    "*28.6¢ per kWh.*"
+   ],
+   "say": "Why? New York power averages twenty-eight point six cents a kilowatt-hour.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Plus a *25% state credit*",
+    "up to *$5,000.*"
+   ],
+   "say": "Plus there's a twenty-five percent state tax credit, up to five thousand dollars.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Net metering still credits",
+    "exports at *retail.*"
+   ],
+   "say": "And residential net metering still credits exports at retail.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Typical payback:",
+    "*about 7 years.*"
+   ],
+   "say": "A typical system pays back in about seven years after the state credit.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "New York solar in 2026",
+    "~The $5,000 credit + payback math"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Going solar in New York? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

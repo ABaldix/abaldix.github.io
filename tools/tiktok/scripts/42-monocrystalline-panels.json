@@ -1,0 +1,63 @@
+{
+ "assets": "../assets",
+ "article": "monocrystalline-panels",
+ "scenes": [
+  {
+   "lines": [
+    "Mono. Poly. Thin-film.",
+    "*What does it mean?*"
+   ],
+   "say": "Mono. Poly. Thin-film. Your solar quote is full of jargon.",
+   "kicker": "Solar jargon",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Here's the *simple* version."
+   ],
+   "say": "Here's the simple version.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "*Monocrystalline:* the standard",
+    "for US homes."
+   ],
+   "say": "Monocrystalline panels are cut from a single silicon crystal, and they're the standard for US homes.",
+   "bg": "panels-sun.jpg"
+  },
+  {
+   "lines": [
+    "About *20–25%* efficient."
+   ],
+   "say": "They're about twenty to twenty-five percent efficient.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "*Poly* is now rare. *Thin-film*",
+    "is mostly for big solar farms."
+   ],
+   "say": "Polycrystalline is now rare on homes, and thin-film is mainly used in utility-scale projects.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "What matters more:",
+    "*installer* + *price per watt.*"
+   ],
+   "say": "Panel type matters less than installer quality and price per watt.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Solar panel types, simply",
+    "~Mono, poly, thin-film and new cells"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Confused by panel types? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "is-solar-worth-it-massachusetts",
+ "scenes": [
+  {
+   "lines": [
+    "Massachusetts power costs",
+    "*30.5¢* per kWh."
+   ],
+   "say": "Imagine paying thirty point five cents a kilowatt-hour for electricity. That's Massachusetts.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "That's bad for bills…",
+    "but *great for solar.*"
+   ],
+   "say": "That's bad for your bills. But great for solar.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Full *retail* net metering.",
+    "~Eversource, National Grid, Unitil"
+   ],
+   "say": "Eversource, National Grid, and Unitil credit exports at the full retail rate.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "SMART 3.0 pays *3¢ per kWh*",
+    "for *20 years.*"
+   ],
+   "say": "The SMART three program pays three cents for every kilowatt-hour you produce, locked for twenty years.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Plus a *15% state credit.*"
+   ],
+   "say": "Plus a fifteen percent state tax credit and tax exemptions.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Typical payback:",
+    "*6 to 7 years.*"
+   ],
+   "say": "Put together, a typical system pays back in about six to seven years.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Massachusetts solar math",
+    "~SMART 3.0 + net metering explained"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Going solar in Massachusetts? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

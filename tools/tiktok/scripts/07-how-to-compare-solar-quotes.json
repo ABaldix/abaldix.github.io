@@ -1,0 +1,68 @@
+{
+ "assets": "../assets",
+ "article": "how-to-compare-solar-quotes",
+ "scenes": [
+  {
+   "lines": [
+    "Three solar quotes.",
+    "*Thousands* of dollars apart."
+   ],
+   "say": "Imagine this. You get three solar quotes for the same house, and they're thousands of dollars apart.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Which one is the *real deal?*"
+   ],
+   "say": "Which one is the real deal?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Ignore the *monthly payment.*"
+   ],
+   "say": "First, ignore the monthly payment.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Compare *price per watt.*",
+    "~Total price ÷ system watts"
+   ],
+   "say": "Compare price per watt. That's the total price divided by the system size in watts.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "type": "list",
+   "kicker": "Then check:",
+   "items": [
+    "A realistic *production estimate*",
+    "A *10+ year* workmanship warranty",
+    "No *pressure tactics*"
+   ],
+   "say": "Then check for a realistic production estimate, a workmanship warranty of at least ten years, and no pressure tactics.",
+   "itemStart": 1.6,
+   "itemStep": 2.2,
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Red flag: a 2026 quote that",
+    "promises the *30% federal credit.*"
+   ],
+   "say": "And a big red flag: any twenty twenty-six quote that still promises the thirty percent federal tax credit.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Got quotes on the table?",
+    "~Our 10-point checklist"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Comparing quotes right now? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "assets": "../assets",
+ "article": "portable-power-station-vs-home-battery",
+ "scenes": [
+  {
+   "lines": [
+    "A storm is coming.",
+    "You need *backup power.*"
+   ],
+   "say": "Picture this. A storm is coming, and you want backup power.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Power station or",
+    "*home battery?*"
+   ],
+   "say": "Should you get a portable power station, or a home battery?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Power stations: *1–5 kWh.*",
+    "~Fridge, lights, phones"
+   ],
+   "say": "Portable power stations hold about one to five kilowatt-hours. Perfect for a fridge, lights, and devices.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Home batteries: *10–15+ kWh.*",
+    "~Whole circuits, automatically"
+   ],
+   "say": "Home batteries hold ten to fifteen or more, and back up whole circuits automatically.",
+   "bg": "battery-wall.jpg"
+  },
+  {
+   "lines": [
+    "Portable + panels: *under $3,000.*",
+    "Home battery: *$10,000+.*"
+   ],
+   "say": "A portable unit with foldable panels can cost under three thousand dollars. An installed home battery usually costs ten thousand or more.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Never *backfeed* your house",
+    "without a transfer switch."
+   ],
+   "say": "Safety tip: never backfeed a portable unit into your house wiring without a proper transfer switch.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Which backup is right?",
+    "~Power station vs home battery"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Planning for outages? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

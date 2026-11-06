@@ -1,0 +1,69 @@
+{
+ "assets": "../assets",
+ "article": "solar-battery-cost",
+ "scenes": [
+  {
+   "lines": [
+    "A salesperson quotes you",
+    "*$20,000* for a home battery."
+   ],
+   "say": "Imagine a salesperson quotes you twenty thousand dollars for a home battery.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Is that a *fair price?*"
+   ],
+   "say": "Is that a fair price?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Most 10–15 kWh batteries:",
+    "*$10,000–$16,000* installed."
+   ],
+   "say": "In twenty twenty-six, a typical ten to fifteen kilowatt-hour battery costs about ten to sixteen thousand dollars installed.",
+   "bg": "battery-wall.jpg"
+  },
+  {
+   "lines": [
+    "That's about *$850–$1,300*",
+    "per kWh of storage."
+   ],
+   "say": "That's roughly eight hundred fifty to thirteen hundred dollars per kilowatt-hour of usable storage.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "And *no federal credit*",
+    "~for batteries bought in 2026"
+   ],
+   "say": "And purchased batteries installed in twenty twenty-six get no federal tax credit.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "type": "list",
+   "kicker": "Batteries pay off fastest with:",
+   "items": [
+    "*Net billing*",
+    "*Time-of-use* rates",
+    "Frequent *outages*"
+   ],
+   "say": "Batteries pay off fastest under net billing, with time-of-use rates, or when backup power really matters to you.",
+   "itemStart": 1.6,
+   "itemStep": 2.2,
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "What should *you* pay?",
+    "~2026 battery prices by size and brand"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Want to check your battery quote? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

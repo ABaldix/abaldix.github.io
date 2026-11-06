@@ -1,0 +1,96 @@
+{
+ "assets": "../assets",
+ "article": "do-solar-panels-work-during-power-outage",
+ "scenes": [
+  {
+   "dur": 3.6,
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)",
+   "kicker": "Imagine this…",
+   "lines": [
+    "You spend *$20,000+* on solar panels."
+   ],
+   "say": "Imagine this. You spend over twenty thousand dollars on solar panels."
+  },
+  {
+   "dur": 3.4,
+   "color": "radial-gradient(120% 80% at 50% 10%,#2B3550,#05070D)",
+   "flash": true,
+   "lines": [
+    "Then a storm knocks out the power. ⚡"
+   ],
+   "say": "Then a storm knocks out the power."
+  },
+  {
+   "dur": 3.4,
+   "bg": "panels-sun.jpg",
+   "lines": [
+    "Next morning, the sun is out.",
+    "~Your panels are in full sunlight. ☀️"
+   ],
+   "say": "The next morning, the sun is out. Your panels are sitting in full sunlight."
+  },
+  {
+   "dur": 3.0,
+   "color": "#05070D",
+   "lines": [
+    "But your house is *still dark.*"
+   ],
+   "say": "But your house is still dark."
+  },
+  {
+   "dur": 4.4,
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)",
+   "chip": "Why?",
+   "lines": [
+    "Most grid-tied solar *shuts off* in a blackout.",
+    "~Even on a sunny day."
+   ],
+   "step": 0.9,
+   "say": "Why? Most grid-tied solar systems shut off during a blackout. Even on a sunny day."
+  },
+  {
+   "dur": 4.6,
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)",
+   "chip": "It's on purpose",
+   "lines": [
+    "It's a *safety rule*.",
+    "~Your system can't send power onto lines that workers are repairing."
+   ],
+   "step": 0.9,
+   "say": "It's a safety rule. Your system can't send power onto lines that workers are repairing."
+  },
+  {
+   "dur": 6.4,
+   "bg": "battery-wall.jpg",
+   "type": "list",
+   "kicker": "How to keep the lights on:",
+   "items": [
+    "A *battery* with backup",
+    "An inverter with a *daytime backup outlet*",
+    "A *generator* or power station"
+   ],
+   "itemStep": 2.55,
+   "say": "So how do you keep the lights on? One: a battery with backup. Two: an inverter with a daytime backup outlet. Three: a generator or a portable power station.",
+   "itemStart": 2.3
+  },
+  {
+   "dur": 4.0,
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)",
+   "lines": [
+    "A *10–14 kWh* battery can run your essentials for about *a day*."
+   ],
+   "say": "A ten to fourteen kilowatt-hour battery can run your essentials for about a day."
+  },
+  {
+   "dur": 4.4,
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "type": "cta",
+   "lines": [
+    "Which backup fits *your* home?",
+    "~Costs + comparison in our free guide"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Which backup fits your home? Compare the costs in our free guide at viva voltia dot com."
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "assets": "../assets",
+ "article": "are-solar-panels-worth-it",
+ "scenes": [
+  {
+   "lines": [
+    "Your neighbor just got *solar panels.*"
+   ],
+   "say": "Picture this. Your neighbor just got solar panels.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Now the salesperson is *at your door.*"
+   ],
+   "say": "And now the same salesperson is knocking on your door.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "The big question:",
+    "*Is solar still worth it in 2026?*"
+   ],
+   "say": "The big question. Is solar still worth it in twenty twenty-six?",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "The *30% federal credit* ended.",
+    "~For systems installed after 2025."
+   ],
+   "say": "Here's what changed. The thirty percent federal tax credit ended for systems installed after twenty twenty-five.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "type": "list",
+   "kicker": "Solar is usually worth it if:",
+   "items": [
+    "You pay *above-average* power rates",
+    "You have a *sunny* roof",
+    "You'll stay *10+ years*"
+   ],
+   "say": "Solar is usually still worth it if: you pay above-average electricity rates. You have a sunny roof. And you plan to stay ten years or more.",
+   "itemStart": 1.6,
+   "itemStep": 2.2,
+   "bg": "panels-sun.jpg"
+  },
+  {
+   "lines": [
+    "Typical payback now:",
+    "*9 to 14 years.*"
+   ],
+   "say": "Typical payback is now about nine to fourteen years. In high-rate states, it can still be under ten.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Is it worth it *for you?*",
+    "~The 5 factors that decide it"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Want to know if it's worth it for you? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

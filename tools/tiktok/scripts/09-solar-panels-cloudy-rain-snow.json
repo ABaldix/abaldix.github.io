@@ -1,0 +1,63 @@
+{
+ "assets": "../assets",
+ "article": "solar-panels-cloudy-rain-snow",
+ "scenes": [
+  {
+   "lines": [
+    "It's a *cloudy, rainy* week."
+   ],
+   "say": "Picture this. It's a cloudy, rainy week.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Are your solar panels",
+    "*doing anything?*"
+   ],
+   "say": "Are your solar panels doing anything at all?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Yes. Panels make about",
+    "*10–25%* of normal output."
+   ],
+   "say": "Yes. On cloudy days, panels still make about ten to twenty-five percent of their clear-sky output.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "And *cold* actually helps.",
+    "~Heat is what hurts output."
+   ],
+   "say": "And here's the surprise. Cold weather actually improves efficiency. Heat is what reduces output.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Snow usually *slides off*",
+    "within a day or two of sun."
+   ],
+   "say": "Snow usually slides off tilted panels within a day or two of sunshine. Don't climb on the roof to clear it.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "What matters is the *whole year.*"
+   ],
+   "say": "What really matters is annual production, and installers size systems using decades of local weather data.",
+   "bg": "panels-sun.jpg"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Solar in *every season*",
+    "~Clouds, rain, snow and heat explained"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Curious how solar does where you live? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

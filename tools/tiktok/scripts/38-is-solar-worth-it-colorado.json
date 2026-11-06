@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "is-solar-worth-it-colorado",
+ "scenes": [
+  {
+   "lines": [
+    "Colorado: *high altitude*,",
+    "*cool air*, strong sun."
+   ],
+   "say": "Picture Colorado. High altitude, cool air, and strong sun.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Perfect for solar panels."
+   ],
+   "say": "That's a great combo for solar panels.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "About *5.4 sun hours* a day.",
+    "~Cool air boosts efficiency"
+   ],
+   "say": "Colorado gets about five point four peak sun hours a day, and cool air helps panels run efficiently.",
+   "bg": "panels-sun.jpg"
+  },
+  {
+   "lines": [
+    "Xcel and Black Hills offer",
+    "*net metering.*"
+   ],
+   "say": "Xcel Energy and Black Hills Energy offer net metering.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Typical payback:",
+    "*9 to 10 years.*"
+   ],
+   "say": "A typical system pays back in about nine to ten years.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Just plan for *hail.*",
+    "~Rated panels + good insurance"
+   ],
+   "say": "Just plan for hail: hail-rated panels and good insurance.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Colorado solar in 2026",
+    "~Payback math + hail protection"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Going solar in Colorado? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "is-solar-worth-it-illinois",
+ "scenes": [
+  {
+   "lines": [
+    "Illinois *cut* net metering",
+    "in 2025."
+   ],
+   "say": "Imagine this. Illinois cut net metering for new solar customers in twenty twenty-five.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Is solar *dead* there?"
+   ],
+   "say": "So is solar dead there?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "No — thanks to",
+    "*Illinois Shines.*"
+   ],
+   "say": "Not at all, thanks to Illinois Shines.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "It buys 15 years of credits —",
+    "often *$7,000–$14,000.*"
+   ],
+   "say": "It buys fifteen years of your system's renewable energy credits, often worth seven to fourteen thousand dollars for a home.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Plus a *$300 per kW* rebate",
+    "~ComEd and Ameren"
+   ],
+   "say": "ComEd and Ameren also pay a three hundred dollar per kilowatt rebate.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Payback with both:",
+    "*8 to 10 years.*"
+   ],
+   "say": "With both, a typical system can pay back in about eight to ten years.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Illinois Shines explained",
+    "~Real 2026 payback numbers"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Going solar in Illinois? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

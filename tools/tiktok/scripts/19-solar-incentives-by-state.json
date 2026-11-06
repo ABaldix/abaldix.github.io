@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "solar-incentives-by-state",
+ "scenes": [
+  {
+   "lines": [
+    "The *federal* solar credit",
+    "is gone."
+   ],
+   "say": "Picture this. The federal solar tax credit is gone.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Is there *any money left*",
+    "for going solar?"
+   ],
+   "say": "Is there any money left for going solar?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Yes — about *a dozen states*",
+    "have their own credits or rebates."
+   ],
+   "say": "Yes. About a dozen states offer their own solar tax credits or rebates.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "New York: *25%* up to *$5,000.*"
+   ],
+   "say": "New York's twenty-five percent credit, up to five thousand dollars, is one of the strongest.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Some states *pay you* for",
+    "the power you produce."
+   ],
+   "say": "In states like New Jersey, Massachusetts, and Illinois, programs pay you for the power you produce.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "And *tax exemptions* quietly",
+    "save hundreds to thousands."
+   ],
+   "say": "And property and sales tax exemptions quietly save hundreds to thousands of dollars.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "What does *your* state offer?",
+    "~Every state incentive, in one place"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Want to see your state's incentives? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

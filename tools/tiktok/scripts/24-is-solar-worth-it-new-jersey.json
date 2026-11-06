@@ -1,0 +1,65 @@
+{
+ "assets": "../assets",
+ "article": "is-solar-worth-it-new-jersey",
+ "scenes": [
+  {
+   "lines": [
+    "New Jersey pays solar owners",
+    "*twice.*"
+   ],
+   "say": "Here's something most people don't know. New Jersey pays solar owners twice.",
+   "kicker": "Did you know?",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "*First:* full retail",
+    "net metering."
+   ],
+   "say": "First, full retail net metering on your bill.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "*Second:* SREC-II payments",
+    "for *15 years.*"
+   ],
+   "say": "Second, SREC-two payments: one certificate for every thousand kilowatt-hours you produce, for fifteen years.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Power costs *24.6¢*",
+    "~well above the US average"
+   ],
+   "say": "With power at twenty-four point six cents, well above average…",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "…typical payback is",
+    "*about 7 years.*"
+   ],
+   "say": "A typical system pays back in about seven years. Among the fastest in the country.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Plus *sales* and *property tax*",
+    "exemptions."
+   ],
+   "say": "Plus sales tax and property tax exemptions.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "New Jersey solar in 2026",
+    "~SREC-II explained simply"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Going solar in New Jersey? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

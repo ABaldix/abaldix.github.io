@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "tesla-solar-roof-vs-panels",
+ "scenes": [
+  {
+   "lines": [
+    "Solar *shingles* look",
+    "amazing."
+   ],
+   "say": "Picture this. You see a house with solar shingles. They look amazing.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "But what do they *cost?*"
+   ],
+   "say": "But what do they cost?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "A solar roof *replaces* your",
+    "whole roof."
+   ],
+   "say": "A Tesla Solar Roof replaces your entire roof. Panels sit on top of your existing one.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Per watt: *2–3×* the cost",
+    "of regular panels."
+   ],
+   "say": "Per watt of capacity, solar roofs typically cost two to three times as much as panels.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Panels: more *efficient*,",
+    "easier to *repair.*"
+   ],
+   "say": "Panels are more efficient per square foot, easier to repair, and widely available.",
+   "bg": "panels-sun.jpg"
+  },
+  {
+   "lines": [
+    "Solar roof makes sense if you",
+    "*need a new roof anyway.*"
+   ],
+   "say": "A solar roof mainly makes sense if you need a new roof anyway and love the look.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Solar roof or panels?",
+    "~The price gap explained"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Torn between the two? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "federal-solar-tax-credit-guide",
+ "scenes": [
+  {
+   "lines": [
+    "Your friend got *30% off*",
+    "solar last year."
+   ],
+   "say": "Picture this. Your friend got thirty percent off their solar panels last year.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "You want the *same deal.*"
+   ],
+   "say": "You want the same deal.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "But the *30% credit ended.*",
+    "~Dec 31, 2025"
+   ],
+   "say": "But the thirty percent federal homeowner credit ended on December thirty-first, twenty twenty-five.",
+   "bg": "tax-forms.jpg"
+  },
+  {
+   "lines": [
+    "Systems installed in 2026 get",
+    "*no federal credit.*"
+   ],
+   "say": "Homeowner-owned systems placed in service after that get no federal tax credit.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "But *leasing companies* can still",
+    "claim a business credit."
+   ],
+   "say": "Leasing companies can still claim a business credit, which can lower lease prices.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "State credits, rebates and",
+    "*net metering* now matter most."
+   ],
+   "say": "State tax credits, rebates, property tax exemptions, and net metering are now the main incentives.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "What's left for *you?*",
+    "~Your solar options in 2026"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Want to know what you can still get? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

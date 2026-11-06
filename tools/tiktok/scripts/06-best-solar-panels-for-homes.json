@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "best-solar-panels-for-homes",
+ "scenes": [
+  {
+   "lines": [
+    "Premium panels.",
+    "*Premium price.*"
+   ],
+   "say": "Picture this. An installer pitches premium panels, at a premium price.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Do you *really* need them?"
+   ],
+   "say": "Do you really need them?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Most quality panels are",
+    "*20–23% efficient.*"
+   ],
+   "say": "Most quality home panels in twenty twenty-six are twenty to twenty-three percent efficient.",
+   "bg": "panels-sun.jpg"
+  },
+  {
+   "lines": [
+    "The gap is *smaller*",
+    "than marketing suggests."
+   ],
+   "say": "The gap between good and premium is smaller than the marketing suggests.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Premium mainly pays off on",
+    "*small or tricky roofs.*"
+   ],
+   "say": "Premium panels mainly pay off on small or complicated roofs.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Look for a *25-year*",
+    "product + performance warranty."
+   ],
+   "say": "For most homes, a reputable mid-range panel with a twenty-five year warranty is the best value.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Which brand fits *your* roof?",
+    "~Top panel brands compared"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Want to compare the top brands? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

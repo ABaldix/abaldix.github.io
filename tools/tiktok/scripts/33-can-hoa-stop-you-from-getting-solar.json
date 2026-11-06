@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "can-hoa-stop-you-from-getting-solar",
+ "scenes": [
+  {
+   "lines": [
+    "Your HOA says:",
+    "*no solar panels.*"
+   ],
+   "say": "Picture this. You want solar, but your HOA says no.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Can they *really* stop you?"
+   ],
+   "say": "Can they really stop you?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "There's *no federal* solar",
+    "access law."
+   ],
+   "say": "There's no federal solar access law. It depends on your state.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "About *30 states* limit what",
+    "HOAs can do."
+   ],
+   "say": "Roughly thirty states limit HOA restrictions on solar to some degree.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Most allow only *reasonable* rules",
+    "on placement and looks."
+   ],
+   "say": "Many allow only reasonable rules about placement and appearance.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Tip: submit a *complete*,",
+    "professional application."
+   ],
+   "say": "Even then, you'll usually need approval. A complete, professional application is the fastest way to a yes.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Know your solar rights",
+    "~HOA rules, state by state"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "HOA giving you trouble? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

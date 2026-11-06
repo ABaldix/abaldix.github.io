@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "is-solar-worth-it-pennsylvania",
+ "scenes": [
+  {
+   "lines": [
+    "Pennsylvania power now costs",
+    "*21.8¢* per kWh."
+   ],
+   "say": "If you live in Pennsylvania, your power now costs about twenty-one point eight cents a kilowatt-hour.",
+   "kicker": "Pennsylvania",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Is solar *worth it* yet?"
+   ],
+   "say": "So is solar worth it yet?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "The state requires",
+    "*1:1 net metering.*"
+   ],
+   "say": "Pennsylvania requires one-to-one net metering. Every exported kilowatt-hour is credited at retail.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "And *SRECs* can add",
+    "extra income."
+   ],
+   "say": "And solar renewable energy credits can add extra income.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Typical payback:",
+    "*about 10 years.*"
+   ],
+   "say": "That's why a typical system pays back in about ten years.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "*PECO* vs *PPL?*",
+    "~The details differ"
+   ],
+   "say": "The details differ between utilities like PECO and PPL.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Pennsylvania solar math",
+    "~Net metering, SRECs and payback"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Going solar in Pennsylvania? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

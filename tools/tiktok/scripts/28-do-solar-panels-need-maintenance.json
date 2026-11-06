@@ -1,0 +1,63 @@
+{
+ "assets": "../assets",
+ "article": "do-solar-panels-need-maintenance",
+ "scenes": [
+  {
+   "lines": [
+    "A company offers a *yearly*",
+    "solar cleaning plan."
+   ],
+   "say": "Picture this. A company offers you a yearly solar panel cleaning plan.",
+   "kicker": "Picture this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Do you *need* it?"
+   ],
+   "say": "Do you actually need it?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Panels have *no moving parts.*"
+   ],
+   "say": "Solar panels have no moving parts, and need little routine maintenance.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "*Rain* usually keeps them",
+    "clean enough."
+   ],
+   "say": "Rain usually keeps them clean enough.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Cleaning helps most in",
+    "*dusty areas* or after *pollen.*"
+   ],
+   "say": "Cleaning helps most in dry, dusty areas, or after heavy pollen or bird droppings.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Best habit: check your",
+    "*monitoring app* monthly."
+   ],
+   "say": "The best maintenance habit? Check your monitoring app once a month.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Solar care made easy",
+    "~Cleaning, monitoring and real costs"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Want the simple care guide? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

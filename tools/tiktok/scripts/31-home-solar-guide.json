@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "home-solar-guide",
+ "scenes": [
+  {
+   "lines": [
+    "You've *never* looked",
+    "into solar before."
+   ],
+   "say": "Imagine you've never looked into solar before.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Where do you even *start?*"
+   ],
+   "say": "Where do you even start?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Typical home: *7–10 kW.*",
+    "~About $19,000–$29,000"
+   ],
+   "say": "A typical US home needs a seven to ten kilowatt system, about nineteen to twenty-nine thousand dollars before incentives.",
+   "bg": "panels-sun.jpg"
+  },
+  {
+   "lines": [
+    "The *30% federal credit* ended",
+    "after 2025."
+   ],
+   "say": "The thirty percent federal homeowner credit ended after twenty twenty-five.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Now your *power rate* and",
+    "*state rules* decide the math."
+   ],
+   "say": "So now your electricity rate and your state's rules decide most of the math.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Get *3 quotes.*",
+    "~Compare price per watt"
+   ],
+   "say": "And get at least three quotes, comparing price per watt, equipment, and warranties.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "New to solar? Start here",
+    "~The complete 2026 beginner's guide"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Just getting started? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "assets": "../assets",
+ "article": "solar-panel-orientation-and-tilt",
+ "scenes": [
+  {
+   "lines": [
+    "Your roof faces *east and west.*",
+    "~No south side"
+   ],
+   "say": "Imagine this. Your roof faces east and west. No south side at all.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "Is solar *a waste?*"
+   ],
+   "say": "Is solar a waste?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "South is best in the US…"
+   ],
+   "say": "In the US, south-facing panels produce the most energy over a year.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "…but east and west only lose",
+    "about *10–20%.*"
+   ],
+   "say": "But east and west-facing panels typically produce only ten to twenty percent less. Usually still worthwhile.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "*West* panels can even be",
+    "worth more."
+   ],
+   "say": "And west-facing panels can be worth even more under time-of-use rates and net billing, because they produce later in the day.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Most roof pitches are",
+    "*close enough* to perfect."
+   ],
+   "say": "Most roof pitches, from about fifteen to forty degrees, are close enough to optimal.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Is *your* roof good for solar?",
+    "~Direction and tilt explained"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Wondering about your roof? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

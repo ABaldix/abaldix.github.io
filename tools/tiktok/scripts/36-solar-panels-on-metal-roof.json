@@ -1,0 +1,64 @@
+{
+ "assets": "../assets",
+ "article": "solar-panels-on-metal-roof",
+ "scenes": [
+  {
+   "lines": [
+    "You have a *metal roof.*"
+   ],
+   "say": "Imagine you have a metal roof.",
+   "kicker": "Imagine this…",
+   "bg": "metal-roof.jpg"
+  },
+  {
+   "lines": [
+    "Can you even put",
+    "*solar* on it?"
+   ],
+   "say": "Can you even put solar on it?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Yes — it's one of the",
+    "*best roofs* for solar."
+   ],
+   "say": "Yes. It's one of the best roofs for solar.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Metal roofs last *40–70 years.*",
+    "~Longer than the panels"
+   ],
+   "say": "Metal roofs last forty to seventy years, longer than the panels themselves.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "Standing seam? *No drilling.*",
+    "~Clamps grip the seams"
+   ],
+   "say": "On standing seam roofs, clamps grip the seams. No holes drilled through your roof.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Install is often *faster*",
+    "and can cost less."
+   ],
+   "say": "Installation is often quicker, and can cost less in labor.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Metal roof + solar",
+    "~Mounts, costs and what to check"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Got a metal roof? Read the free guide at viva voltia dot com."
+  }
+ ]
+}

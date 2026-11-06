@@ -1,0 +1,66 @@
+{
+ "assets": "../assets",
+ "article": "how-long-do-solar-panels-last",
+ "scenes": [
+  {
+   "lines": [
+    "You spend *$20,000+*",
+    "on solar panels."
+   ],
+   "say": "Imagine this. You spend over twenty thousand dollars on solar panels.",
+   "kicker": "Imagine this…",
+   "color": "radial-gradient(120% 80% at 50% 20%,#1F2A44,#05070D)"
+  },
+  {
+   "lines": [
+    "How long until you",
+    "*need new ones?*"
+   ],
+   "say": "How long until you need new ones?",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "Quality panels last",
+    "*25–30+ years.*"
+   ],
+   "say": "Quality panels usually last twenty-five to thirty years or more.",
+   "bg": "panels-sun.jpg"
+  },
+  {
+   "lines": [
+    "They lose about *0.5%* a year.",
+    "~NREL research"
+   ],
+   "say": "NREL research puts typical degradation around half a percent a year.",
+   "color": "linear-gradient(160deg,#064E3B,#0B1220)"
+  },
+  {
+   "lines": [
+    "A 20-year-old panel still makes",
+    "about *90%* of its power."
+   ],
+   "say": "So a twenty-year-old panel still makes about ninety percent of its original output.",
+   "color": "linear-gradient(160deg,#0B3B4A,#0B1220)"
+  },
+  {
+   "lines": [
+    "The part to budget for:",
+    "a *string inverter.*",
+    "~10–15 years"
+   ],
+   "say": "The part to budget for is the string inverter, which typically lasts ten to fifteen years.",
+   "color": "linear-gradient(160deg,#3B1F4A,#0B1220)"
+  },
+  {
+   "type": "cta",
+   "color": "linear-gradient(160deg,#065F46,#022C22)",
+   "lines": [
+    "Built to last",
+    "~Lifespan, warranties and degradation"
+   ],
+   "bio": "Free guide → just search it",
+   "say": "Want the full lifespan breakdown? Read the free guide at viva voltia dot com."
+  }
+ ]
+}
