@@ -13,7 +13,7 @@ PINS_C = {
  "is-solar-worth-it-california": ("California Solar After NEM 3.0", "Why a battery changes the math", "California Solar Payback in 2026: With vs Without a Battery"),
  "solar-panels-cloudy-rain-snow": ("Solar Works in Winter Too", "Clouds, rain, snow and cold explained", "Do Solar Panels Work in Winter?"),
  "solar-lease-vs-buy": ("Lease, Loan or Cash?", "The smartest way to pay for solar", "Solar Lease vs Loan vs Cash in 2026"),
- "is-solar-worth-it-texas": ("Texas Solar: Pick the Right Plan", "Buyback plans can double your savings", "Texas Solar Buyback Plans Compared"),
+ "is-solar-worth-it-texas": ("Texas Solar: Pick the Right Plan", "The right plan cuts years off payback", "Texas Solar Buyback Plans Compared"),
  "solar-and-ev-charging": ("Power Your EV With Sunshine", "How many extra panels you need", "How Much Solar Do You Need for an Electric Car?"),
  "tesla-powerwall-3-review": ("Is the Powerwall 3 Worth It?", "Specs, price and real backup times", "Tesla Powerwall 3: Honest 2026 Review"),
  "federal-solar-tax-credit-guide": ("What Replaced the 30% Credit?", "Your solar options in 2026", "Solar Tax Credit Ended: Your Options in 2026"),
