@@ -30,7 +30,7 @@ const STATES = [
   ['state-tennessee', 'Tennessee', '13.4¢', '4.6', 'No net metering (TVA)', 'Exports ~4¢ per kWh'],
   ['state-kentucky', 'Kentucky', '13.8¢', '4.3', 'Net metering, reduced exports', 'LG&E ~7.1¢ · KU ~7.5¢'],
   ['state-louisiana', 'Louisiana', '12.9¢', '4.9', 'Avoided-cost exports', '~2.8¢ per kWh outside New Orleans'],
-  ['state-oklahoma', 'Oklahoma', '14.8¢', '5.2', 'Monthly net metering', 'Surplus earns ~3–4¢: size to your use'],
+  ['state-oklahoma', 'Oklahoma', '14.8¢', '5.2', 'Monthly net metering', 'Monthly surplus earns wholesale prices'],
   ['state-iowa', 'Iowa', '17.1¢', '4.3', 'Inflow-outflow at retail', 'Credit locked 20 years before 2027'],
   ['state-alabama', 'Alabama', '16.3¢', '4.8', 'No net metering', 'Alabama Power fee: $5.41/kW a month'],
   ['state-idaho', 'Idaho', '13.4¢', '4.8', 'Net billing (Idaho Power)', 'Exports ~3¢, or ~15.7¢ on summer peak'],
