@@ -102,7 +102,16 @@ description: Free solar calculator for all 50 states: estimate system size, cost
             if (!st) { box.hidden = true; return; }
             el("rate").value = st[1].toFixed(3);
             el("sun").value = st[2].toFixed(1);
-            el("export").value = String(st[3]);
+            var ex = el("export"), v = String(st[3]), extra = el("export-state");
+            if (extra) { extra.remove(); }
+            if (![].some.call(ex.options, function (o) { return o.value === v; })) {
+                // State-specific credit that is not one of the standard choices
+                extra = document.createElement("option");
+                extra.id = "export-state"; extra.value = v;
+                extra.textContent = "About " + Math.round(st[3] * 100) + "% of retail (typical in " + st[0] + ")";
+                ex.appendChild(extra);
+            }
+            ex.value = v;
             var msg = st[0] + ": average price " + (st[1] * 100).toFixed(1) + "\u00a2/kWh, about " + st[2].toFixed(1) + " peak sun hours a day.";
             box.textContent = msg + " ";
             if (GUIDES[c]) {
