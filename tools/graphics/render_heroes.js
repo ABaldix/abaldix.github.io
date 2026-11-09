@@ -34,6 +34,7 @@ const STATES = [
   ['state-iowa', 'Iowa', '17.1¢', '4.3', 'Inflow-outflow at retail', 'Credit locked 20 years before 2027'],
   ['state-alabama', 'Alabama', '16.3¢', '4.8', 'No net metering', 'Alabama Power fee: $5.41/kW a month'],
   ['state-idaho', 'Idaho', '13.4¢', '4.8', 'Net billing (Idaho Power)', 'Exports ~3¢, or ~15.7¢ on summer peak'],
+  ['state-arkansas', 'Arkansas', '14.4¢', '4.7', 'Net billing (Act 278)', 'Entergy exports ~3.3¢ per kWh'],
   ['state-minnesota', 'Minnesota', '17.2¢', '4.3', 'Retail-rate net metering', 'Every utility must offer it'],
   ['state-new-mexico', 'New Mexico', '16.5¢', '6.2', 'Net metering (PNM, EPE, Xcel)', '10% state tax credit up to $6,000'],
   ['state-wisconsin', 'Wisconsin', '19.4¢', '4.1', 'Monthly net metering', 'Focus on Energy rebate up to $2,400'],

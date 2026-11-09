@@ -4,7 +4,7 @@ window.VV_STATES = {
             AL: ["Alabama", 0.163, 4.8, 0.28],
             AK: ["Alaska", 0.294, 2.9, 1],
             AZ: ["Arizona", 0.151, 6.3, 0.5],
-            AR: ["Arkansas", 0.144, 4.7, 1],
+            AR: ["Arkansas", 0.144, 4.7, 0.23],
             CA: ["California", 0.298, 5.8, 0.25],
             CO: ["Colorado", 0.172, 5.4, 1],
             CT: ["Connecticut", 0.245, 4.0, 1],
@@ -54,7 +54,7 @@ window.VV_STATES = {
             WY: ["Wyoming", 0.144, 5.0, 0.75]
 };
 // States with a full "Is solar worth it" guide (slug under /articles/)
-window.VV_GUIDES = {CA: "is-solar-worth-it-california", TX: "is-solar-worth-it-texas", FL: "is-solar-worth-it-florida", AZ: "is-solar-worth-it-arizona", NY: "is-solar-worth-it-new-york", NJ: "is-solar-worth-it-new-jersey", MA: "is-solar-worth-it-massachusetts", NC: "is-solar-worth-it-north-carolina", CO: "is-solar-worth-it-colorado", IL: "is-solar-worth-it-illinois", NV: "is-solar-worth-it-nevada", GA: "is-solar-worth-it-georgia", PA: "is-solar-worth-it-pennsylvania", VA: "is-solar-worth-it-virginia", MD: "is-solar-worth-it-maryland", SC: "is-solar-worth-it-south-carolina", UT: "is-solar-worth-it-utah", MI: "is-solar-worth-it-michigan", CT: "is-solar-worth-it-connecticut", HI: "is-solar-worth-it-hawaii", OH: "is-solar-worth-it-ohio", WA: "is-solar-worth-it-washington", OR: "is-solar-worth-it-oregon", MN: "is-solar-worth-it-minnesota", NM: "is-solar-worth-it-new-mexico", WI: "is-solar-worth-it-wisconsin", MO: "is-solar-worth-it-missouri", IN: "is-solar-worth-it-indiana", TN: "is-solar-worth-it-tennessee", KY: "is-solar-worth-it-kentucky", LA: "is-solar-worth-it-louisiana", OK: "is-solar-worth-it-oklahoma", IA: "is-solar-worth-it-iowa", AL: "is-solar-worth-it-alabama", ID: "is-solar-worth-it-idaho"};
+window.VV_GUIDES = {CA: "is-solar-worth-it-california", TX: "is-solar-worth-it-texas", FL: "is-solar-worth-it-florida", AZ: "is-solar-worth-it-arizona", NY: "is-solar-worth-it-new-york", NJ: "is-solar-worth-it-new-jersey", MA: "is-solar-worth-it-massachusetts", NC: "is-solar-worth-it-north-carolina", CO: "is-solar-worth-it-colorado", IL: "is-solar-worth-it-illinois", NV: "is-solar-worth-it-nevada", GA: "is-solar-worth-it-georgia", PA: "is-solar-worth-it-pennsylvania", VA: "is-solar-worth-it-virginia", MD: "is-solar-worth-it-maryland", SC: "is-solar-worth-it-south-carolina", UT: "is-solar-worth-it-utah", MI: "is-solar-worth-it-michigan", CT: "is-solar-worth-it-connecticut", HI: "is-solar-worth-it-hawaii", OH: "is-solar-worth-it-ohio", WA: "is-solar-worth-it-washington", OR: "is-solar-worth-it-oregon", MN: "is-solar-worth-it-minnesota", NM: "is-solar-worth-it-new-mexico", WI: "is-solar-worth-it-wisconsin", MO: "is-solar-worth-it-missouri", IN: "is-solar-worth-it-indiana", TN: "is-solar-worth-it-tennessee", KY: "is-solar-worth-it-kentucky", LA: "is-solar-worth-it-louisiana", OK: "is-solar-worth-it-oklahoma", IA: "is-solar-worth-it-iowa", AL: "is-solar-worth-it-alabama", ID: "is-solar-worth-it-idaho", AR: "is-solar-worth-it-arkansas"};
 // Fill a <select> with all states, sorted by name
 window.vvFillStates = function (sel) {
     var S = window.VV_STATES;

@@ -195,4 +195,44 @@ PINS = {
  'is-solar-worth-it-tennessee': ('Is Solar Worth It in Tennessee?', 'No net metering, TVA & honest payback', 'No Net Metering in Tennessee', "Here's when solar still makes sense", 'Is Solar Worth It in Tennessee in 2026?', 'Tennessee has cheap power and no net metering under TVA. See what the Dispersed Power Production program pays, the property tax break, and honest 2026 payback math. #tennesseesolar #nashville #solarpanels #homeowner'),
  'is-solar-worth-it-kentucky': ('Is Solar Worth It in Kentucky?', 'LG&E and KU credits & 2026 payback', 'Kentucky Kept Its Solar Credits', 'What the 2026 LG&E and KU ruling means', 'Is Solar Worth It in Kentucky in 2026?', 'Kentucky regulators kept LG&E and KU solar export credits at about 7 cents in 2026. See how net metering works by utility and honest payback math for Louisville and Lexington. #kentuckysolar #louisville #solarpanels #homeowner'),
  'is-solar-worth-it-louisiana': ('Is Solar Worth It in Louisiana?', 'Avoided-cost credits & honest payback', 'Louisiana Pays ~3¢ for Solar', 'Why New Orleans is the exception', 'Is Solar Worth It in Louisiana in 2026?', 'Most Louisiana utilities pay about 2.8 cents for exported solar, but New Orleans is different. See honest 2026 payback math and when a battery for hurricane backup makes sense. #louisianasolar #neworleans #solarpanels #hurricaneprep'),
+ "solar-panel-cost": (
+   "How Much Do Solar Panels Cost?", "2026 prices by system size",
+   "A Typical System: $21K–$25K", "What drives the price, and how to pay less",
+   "How Much Do Solar Panels Cost in 2026?",
+   "Most 2026 solar quotes land around $2.60–$3.10 per watt, about $21,000–$25,000 for a typical 8 kW system. See prices by system size, what a battery adds, and why financing can raise the price. #solarpanels #solarcost #homeimprovement #savemoney"),
+ "how-to-choose-a-solar-installer": (
+   "How to Choose a Solar Installer", "License, insurance, warranties & red flags",
+   "Vet Your Solar Installer First", "6 checks that take under an hour",
+   "How to Choose a Solar Installer: 2026 Checklist",
+   "The company you hire matters as much as the panels. Learn how to check a solar installer's license, insurance, NABCEP certification, and warranties, and the sales red flags that should end the conversation. #solarinstaller #solarpanels #homeimprovement #homeowner"),
+ "solar-loans": (
+   "Solar Loans Explained", "Rates, dealer fees & how to compare",
+   "That 1.99% Solar Loan Isn't Free", "How dealer fees raise the price",
+   "Solar Loans Explained: Rates and Dealer Fees",
+   "A low advertised solar loan rate can hide a dealer fee of 10–30%. Learn how solar loans work in 2026, how to compare a low-APR loan with a no-fee loan or HELOC, and what to ask before you sign. #solarloan #solarpanels #personalfinance #homeowner"),
+ "is-solar-worth-it-arkansas": (
+   "Is Solar Worth It in Arkansas?", "Net billing after Act 278 & honest payback",
+   "Arkansas Pays ~3¢ for Exported Solar", "Why a smaller system pays back faster",
+   "Is Solar Worth It in Arkansas in 2026?",
+   "Arkansas ended retail-rate net metering for new solar in 2024. Entergy Arkansas now credits exports at about 3.3 cents. See honest 2026 payback math and why sizing to your daytime use matters. #arkansassolar #solarpanels #homeowner #savemoney"),
+ "is-solar-worth-it-oklahoma": (
+   "Is Solar Worth It in Oklahoma?", "Monthly net metering & honest payback",
+   "Oklahoma Solar: 11–13 Year Payback", "Why sizing to your own use matters",
+   "Is Solar Worth It in Oklahoma in 2026?",
+   "Oklahoma pairs strong sunshine with monthly net metering at OG&E and PSO, but surplus earns only wholesale prices. See honest 2026 payback math for Oklahoma City and Tulsa homes. #oklahomasolar #solarpanels #homeowner #savemoney"),
+ "is-solar-worth-it-iowa": (
+   "Is Solar Worth It in Iowa?", "Retail-rate credits locked for 20 years",
+   "Iowa Solar Credits Locked 20 Years", "Why timing matters before 2027",
+   "Is Solar Worth It in Iowa in 2026?",
+   "MidAmerican and Alliant still credit exported solar at the retail energy rate, locked for 20 years for systems installed before a new method takes effect by 2027. See 2026 payback math for Iowa homes. #iowasolar #solarpanels #homeowner #savemoney"),
+ "is-solar-worth-it-alabama": (
+   "Is Solar Worth It in Alabama?", "Alabama Power's solar fee & honest payback",
+   "Alabama Power Charges $5.41/kW a Month", "When solar still makes sense",
+   "Is Solar Worth It in Alabama in 2026?",
+   "Alabama has no net metering and Alabama Power charges solar homes $5.41 per kW each month. See when a small self-use system still pays off in Birmingham, Mobile, and Huntsville. #alabamasolar #solarpanels #homeowner #savemoney"),
+ "is-solar-worth-it-idaho": (
+   "Is Solar Worth It in Idaho?", "Idaho Power net billing & honest payback",
+   "Idaho Exports: ~3¢ or ~15.7¢", "How seasonal credits change your payback",
+   "Is Solar Worth It in Idaho in 2026?",
+   "Idaho Power's net billing pays about 15.7 cents for summer-peak exports but about 3 cents the rest of the year. See honest 2026 payback math for Boise and Idaho Falls and how to size solar so it pays. #idahosolar #solarpanels #homeowner #savemoney"),
 }
